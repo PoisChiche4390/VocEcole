@@ -8,11 +8,6 @@
 
   let actualPage = 0;
   const leftArrowClick = () => {
-    selectedGermanWordsStore.update(() => {
-      let newSelectedGermanWords = selectedGermanWords;
-
-      return newSelectedGermanWords
-    });
     if (actualPage < 1) {
       actualPage = 10
       // console.log("ouais de 0 a 10")
@@ -22,11 +17,6 @@
     }
   };
   const rightArrowClick = () => {
-    selectedGermanWordsStore.update(() => {
-      let newSelectedGermanWords = selectedGermanWords;
-
-      return newSelectedGermanWords
-    });
     if (actualPage > 9) {
       actualPage = 0
       // console.log("oe de 10 a 0")
