@@ -2,10 +2,10 @@ Duolingo BTN
 
 
 <!-- HTML !-->
-<button class="button-19" role="button">Button 19</button>
+<button class="button-duolingo" role="button">Button 19</button>
 
 /* CSS */
-.button-19 {
+.button-duolingo {
   appearance: button;
   background-color: #1899D6;
   border: solid transparent;
@@ -36,7 +36,7 @@ Duolingo BTN
   width: 100%;
 }
 
-.button-19:after {
+.button-duolingo:after {
   background-clip: padding-box;
   background-color: #1CB0F6;
   border: solid transparent;
@@ -51,21 +51,21 @@ Duolingo BTN
   z-index: -1;
 }
 
-.button-19:main,
-.button-19:focus {
+.button-duolingo:main,
+.button-duolingo:focus {
   user-select: auto;
 }
 
-.button-19:hover:not(:disabled) {
+.button-duolingo:hover:not(:disabled) {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
 }
 
-.button-19:disabled {
+.button-duolingo:disabled {
   cursor: auto;
 }
 
-.button-19:active {
+.button-duolingo:active {
   border-width: 4px 0 0;
   background: none;
 }
