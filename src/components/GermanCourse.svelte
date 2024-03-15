@@ -12,7 +12,20 @@
   let lessonEnd = false;
   let readOnly = false;
   let wrongAnswer = false;
+  const totalWords = $selectedGermanWords.length;
   $: notEnoughCharacters = false;
+
+  let margin1 = 80;
+  let margin2 = 75;
+  let margin3 = 100;
+  $: width = window.innerWidth;
+  $: if (width < 270) {
+    margin1 = 50
+    margin2 = 50
+    margin3 = 50
+  } else {
+    margin1 = 80
+  }
 
   $: currentWord = "";
   $: translatedCurrentWord = "";
@@ -25,9 +38,8 @@
 
   $: wordHelp = false;
 
-  let background = "#fff";
+  let background = "#f8f8f8";
 
-  const totalWords = $selectedGermanWords.length;
   $: scorePercentage = score / totalWords * 100;
   const tweenedScore = tweened(0);
   $: tweenedScore.set(scorePercentage);
@@ -38,6 +50,20 @@
     updateCurrentWord()
     return () => {};
   });
+
+  const pressEnterInTextarea = (e) => {
+    if (e.keyCode === 13 || e.which === 13) {
+        e.preventDefault();
+        return false;
+    }
+  }
+
+  const pressEnter = (e) => {
+    switch(e.key) {
+      case "Enter":
+        submitWord();
+    }
+  }
 
   const updateCurrentWord = () => {
     currentWord = $selectedGermanWords[Math.floor(Math.random() * $selectedGermanWords.length)]
@@ -50,7 +76,7 @@
       continueBtn = false;
       color = 'duolingo-button-green'
       notEnoughCharacters = false;
-      background = "#fff";
+      background = "#f8f8f8";
       translatedCurrentWord = "";
       readOnly = false;
       wrongAnswer = false;
@@ -109,39 +135,41 @@
   </div>
   <div class="translate-to-french">
     {#if readOnly == true}
-    <textarea readonly spellcheck="false" cols="5" rows="15" maxlength="175" bind:value={translatedCurrentWord}></textarea>
+    <textarea readonly spellcheck="false" cols="5" rows="15" maxlength="175" bind:value={translatedCurrentWord} on:keypress={e => pressEnterInTextarea(e)}></textarea>
     {:else}
-    <textarea spellcheck="false" cols="5" rows="15" maxlength="175" bind:value={translatedCurrentWord}></textarea>
+    <textarea spellcheck="false" cols="5" rows="15" maxlength="175" bind:value={translatedCurrentWord} on:keypress={e => pressEnterInTextarea(e)}></textarea>
     {/if}
 
     {#if translatedCurrentWord.length > 174}
       <p class="max-characters">Calme, stresse pas</p>
-      <div class="colored-bottom" style="background: {background}; margin-top: 75px"><Button color={color} margin="80px 0" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
     {:else if lessonEnd == true}
-    <div class="colored-bottom" style="background: {background}; margin-top: 100px"><Button color={color} margin="80px 0" on:click={finishLesson}>Confirmer</Button></div>
+    <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px 0" on:click={finishLesson}>Confirmer</Button></div>
     {:else if notEnoughCharacters == true}
-      <p class="not-enough-characters">Il doit y avoir plus d'un charactère (hors espace)</p>
-      <div class="colored-bottom" style="background: {background}; margin-top: 75px"><Button color={color} margin="80px 0" on:click={() => submitWord()}>Confirmer</Button></div>
+      <p class="not-enough-characters">Il doit y avoir plus d'un charactère</p>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin1 - 25}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
     {:else if wrongAnswer == true}
-    <div class="colored-bottom" style="background: {background}; margin-top: 100px">
-      <Button color={color} margin="80px 0" on:click={() => submitWord()}>Confirmer</Button>
+    <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px">
+      <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button>
       <p class="wrong-answer">La bonne réponse était: {currentWord.german}</p>
     </div>
     {:else}
-      <div class="colored-bottom" style="background: {background}; margin-top: 100px"><Button color={color} margin="80px 0" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
     {/if}
   </div>
 </div>
+
+<svelte:window on:keypress={(e) => pressEnter(e)}/>
 
 <style>
   .course-pourcentage {
     width: 500px;
     height: 30px;
     margin: 0 auto;
-    background: #f2f2f2;
+    background: #bbbbbb;
     border:0 solid;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 2vh;
   }
   .pourcentage-contrast {
     height: 10px;
@@ -162,7 +190,7 @@
     display: grid;
     width: 500px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 3vh;
     justify-content: left;
   }
   .help {
@@ -171,6 +199,7 @@
     vertical-align: middle;
     border: 2px solid #d2d2d2;
     border-radius: 20px;
+    background: #fff;
   }
   .words {
     width: 420px;
@@ -185,7 +214,7 @@
   .words-container {
     display: grid;
     width: 420px;
-    height: 100px;
+    height: 9vh;
     margin: 0 auto;
     margin-bottom: 150px;
     font-size: 1.2rem;
@@ -194,7 +223,7 @@
     display: grid;
     margin: 0 auto;
     resize: none;
-    height: 220px;
+    height: 20vh;
     width: 500px;
     justify-content: center;
     padding: 7.5px 40px;
@@ -203,7 +232,7 @@
     border-radius: 5vh;
     outline: none;
     font-size: 1.25rem;
-    background: white;
+    background: #fff;
     overflow: hidden;
   }
   .not-enough-characters {
@@ -228,5 +257,53 @@
     color: #430202;
     font-size: 1.2rem;
     transform: translateY(-150%);
+  }
+
+
+  @media screen and (max-width: 270px) {
+    * {
+      font-size: 1rem;
+    }
+    .course {
+      width: 100vw;
+    }
+    .course-pourcentage {
+      width: 90vw;
+    }
+    h2 {
+      margin-left: 4vw;
+      font-size: 1.2rem;
+    }
+    .words-container {
+      margin-bottom: 15vh;
+    }
+    .words {
+      width: 90vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      transform: translateY(115%);
+    }
+    .help {
+      height: 10vh;
+    }
+    textarea {
+      width: 92vw;
+      height: 20vh;
+      font-size: 0.9rem;
+      padding: 3px 15px;
+    }
+    .colored-bottom {
+      margin-top: 5px;
+    }
+    .help {
+      width: 90vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      height: 10vh;
+    }
+    .wrong-answer {
+      font-size: 0.9rem;
+      transform: translateY(-450%);
+    }
   }
 </style>

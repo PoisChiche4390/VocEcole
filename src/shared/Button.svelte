@@ -203,4 +203,36 @@
     border-width: 4px 0 0;
     background: none;
   }
+
+
+
+  @media screen and (max-width: 270px) {
+    .blue {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      width: 200px;
+      height: 20px;
+      transform: translateY(-125%);
+    }
+    .green {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      width: 200px;
+      height: 30px;
+      transform: translateY(-125%);
+    }
+    .red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      width: 200px;
+      height: 30px;
+      transform: translateY(-125%);
+    }
+  }
 </style>

@@ -1,26 +1,32 @@
 <script>
   import { onDestroy } from 'svelte';
-  import { writable } from 'svelte/store';
   import germanWords from '../stores/germanWords';
   import selectedGermanWordsStore from '../stores/selectedGermanWords';
 
   let actualPage = 0;
-  const pageSize = 10;
+  let pageSize = 10;
+  $: width = innerWidth;
+  $: if (width < 270) {
+    pageSize = 5
+  } else {
+    pageSize = 10
+  }
+
+  const delay = ms => new Promise(res => setTimeout(res, ms));
 
   const leftArrowClick = () => {
     if (actualPage === 0) {
-      actualPage = 1;
+      actualPage = Math.ceil($germanWords.length / pageSize) - 1;
     } else {
-      actualPage = Math.max(actualPage - 1, 0);
+      actualPage = actualPage - 1;
     }
   };
 
   const rightArrowClick = () => {
-    if (actualPage === 1) {
+    if (actualPage === Math.ceil($germanWords.length / pageSize) - 1) {
       actualPage = 0;
     } else {
-      const lastPage = Math.ceil($germanWords.length / pageSize) - 1;
-      actualPage = Math.min(actualPage + 1, lastPage);
+      actualPage++;
     }
   };
 
@@ -42,12 +48,15 @@
     }
   };
 
-  const toggleCheckAll = (e) => {
+  const toggleCheckAll = async (e) => {
     const isChecked = e.target.checked;
     actualWordsPage.forEach(germanWord => {
       germanWord.checked = isChecked;
       changeWord({ target: { checked: isChecked } }, germanWord);
     });
+    rightArrowClick()
+    await delay(0.000000000000000000000000000000000000000000000000000000001);
+    leftArrowClick()
   };
 
   $: startIndex = actualPage * pageSize;
@@ -60,7 +69,7 @@
   });
 </script>
 
-<div class="germanWordsList">
+<div class="german-words-list">
   <div class="wordsContainer">
     <form>
       <label class="select-all">
@@ -93,7 +102,7 @@
 
 <style>
   .wordsContainer {
-    height: 400px;
+    height: 37.5vh;
     border: 0 solid;
     border-radius: 8px;
     max-width: 800px;
@@ -103,8 +112,8 @@
   }
   .wordsContainer {
     display: grid;
-    margin-bottom: 25px;
-    margin-top: 20px;
+    margin-bottom: 1.3vh;
+    margin-top: 1.1vh;
     overflow-y: scroll;
     scrollbar-width: thin;
   }
@@ -119,7 +128,7 @@
   }
   .arrows {
     height: 35px;
-    margin-top: 40px;
+    margin-top: 5vh;
   }
   img {
     height: 35px;
@@ -132,7 +141,20 @@
     padding: 1.5px 7px;
     margin: auto 0;
     border: 0 solid;
-    border-radius: 5px;
+    border-radius: 6px;
     background: #eeeeee;
+  }
+  @media screen and (max-width: 270px) {
+    .german-words-list {
+      font-size: 0.8rem;
+      transform: translateY(-5%);
+    }
+    .arrows {
+      margin-top: 15px;
+      height: 25px;
+    }
+    img {
+      height: 25px;
+    }
   }
 </style>

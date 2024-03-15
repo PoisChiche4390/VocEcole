@@ -9,143 +9,88 @@ const germanWords = writable([
   {
     id: 2,
     forLesson: true,
-    german: 'die Kleidung',
-    germanWithoutMisspeling: 'diekleidung',
-    french: 'les habits, les vêtements'
+    german: 'überall',
+    germanWithoutMisspeling: 'überall',
+    french: 'partout'
   },
   {
     id: 3,
     forLesson: true,
-    german: 'der Spass',
-    germanWithoutMisspeling: 'derspass',
-    french: 'le plaisir, divertissement'
+    german: 'die Öffnungszeiten',
+    germanWithoutMisspeling: 'dieöffnungszeiten',
+    french: "les heures d'ouverture"
   },
   {
     id: 4,
     forLesson: true,
-    german: 'die Liebe',
-    germanWithoutMisspeling: 'dieliebe',
-    french: "l'amour"
+    german: 'die Fussgängerzone, die Fussgängerzonen',
+    germanWithoutMisspeling: 'diefussgängerzone,diefussgängerzonen',
+    french: 'la zone piétonne'
   },
   {
     id: 5,
     forLesson: true,
-    german: 'das Taschengeld',
-    germanWithoutMisspeling: 'dastaschengeld',
-    french: "l'argent de poche"
+    german: 'der Laden, die Laden',
+    germanWithoutMisspeling: 'derladen,dieladen',
+    french: 'le magasin'
   },
   {
     id: 6,
     forLesson: true,
-    german: 'sich wünschen, er wünscht sich, er hat sich gewünscht',
-    germanWithoutMisspeling: 'sichwünschen,erwünschtsich,erhatsichgewünscht',
-    french: 'vouloir, souhaiter'
+    german: 'Ich kaufe lieber in kleinen Läden ein.',
+    germanWithoutMisspeling: 'ichkaufelieberinkleinenlädenein.',
+    french: 'Je préfère acheter dans des petits commerces.'
   },
   {
     id: 7,
     forLesson: true,
-    german: 'Ich wünche mir einen Hund.',
-    germanWithoutMisspeling: 'ichwünchemireinenHund.',
-    french: 'Je voudrais un chien.'
+    german: 'die Beratung',
+    germanWithoutMisspeling: 'dieberatung',
+    french: 'le conseil'
   },
   {
     id: 8,
     forLesson: true,
-    german: 'träumen vom, er träumt, er hat geträumt',
-    germanWithoutMisspeling: 'träumenvom,erträumt,erhatgeträumt',
-    french: 'rêver de'
+    german: 'Die Beratung im Geschäft war sehr gut.',
+    germanWithoutMisspeling: 'dieberatungimgeschäftwarsehrgut.',
+    french: 'Le conseil dans le magasin était très bien.'
   },
   {
     id: 9,
     forLesson: true,
-    german: 'Sie träumt von Ferien am Meer.',
-    germanWithoutMisspeling: 'sieträumtvonferienamMeer.',
-    french: 'Elle rêve de vacances à la mer.'
+    german: 'teilen, teilt, hat geteilt',
+    germanWithoutMisspeling: 'teilen,teilt,hatgeteilt',
+    french: 'partager'
   },
   {
     id: 10,
     forLesson: true,
-    german: 'das Abenteuer',
-    germanWithoutMisspeling: 'dasabenteuer',
-    french: "l'aventure"
+    german: 'brauchen, braucht, hat gebraucht',
+    germanWithoutMisspeling: 'brauchen,braucht,hatgebraucht',
+    french: 'avoir besoin de'
   },
   {
     id: 11,
     forLesson: true,
-    german: 'Er liebt Reisen und sucht das Abenteuer.',
-    germanWithoutMisspeling: 'erliebtreisenundsuchtdasabenteuer.',
-    french: "Il aime voyager et cherche l'aventure."
+    german: 'weniger ≠ mehr',
+    germanWithoutMisspeling: 'wenigermehr',
+    french: 'moins ≠ plus'
   },
   {
     id: 12,
     forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
+    german: 'immer mehr',
+    germanWithoutMisspeling: 'immermehr',
+    french: 'toujours plus'
   },
   {
     id: 13,
     forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
+    german: '',
+    germanWithoutMisspeling: '',
+    french: ''
   },
-  {
-    id: 14,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 15,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 16,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 17,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 18,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 19,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 20,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
-  {
-    id: 21,
-    forLesson: true,
-    german: 'chillen',
-    germanWithoutMisspeling: 'chillen',
-    french: 'chiller, se détendre'
-  },
+  
 ]);
 
 export default germanWords;
