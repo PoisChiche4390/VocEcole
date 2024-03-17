@@ -1,9 +1,10 @@
 <script>
   export let margin = 0;
+  export let marginBottom = 0;
   export let color = 'duolingo-button-blue'
 </script>
 
-<button class:blue={color === 'duolingo-button-blue'} class:green={color === 'duolingo-button-green'} class:red={color === 'duolingo-button-red'} style="margin-top: {margin};" on:click>
+<button class:blue={color === 'duolingo-button-blue'} class:green={color === 'duolingo-button-green'} class:red={color === 'duolingo-button-red'} style="margin-top: {margin}; margin-bottom: {marginBottom};" on:click>
   <slot></slot>
 </button>
 

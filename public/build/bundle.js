@@ -1889,19 +1889,20 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	const default_slot_template = /*#slots*/ ctx[3].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+    	const default_slot_template = /*#slots*/ ctx[4].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
 
     	const block = {
     		c: function create() {
     			button = element("button");
     			if (default_slot) default_slot.c();
     			set_style(button, "margin-top", /*margin*/ ctx[0]);
+    			set_style(button, "margin-bottom", /*marginBottom*/ ctx[1]);
     			attr_dev(button, "class", "svelte-zynsvf");
-    			toggle_class(button, "blue", /*color*/ ctx[1] === 'duolingo-button-blue');
-    			toggle_class(button, "green", /*color*/ ctx[1] === 'duolingo-button-green');
-    			toggle_class(button, "red", /*color*/ ctx[1] === 'duolingo-button-red');
-    			add_location(button, file$6, 5, 0, 94);
+    			toggle_class(button, "blue", /*color*/ ctx[2] === 'duolingo-button-blue');
+    			toggle_class(button, "green", /*color*/ ctx[2] === 'duolingo-button-green');
+    			toggle_class(button, "red", /*color*/ ctx[2] === 'duolingo-button-red');
+    			add_location(button, file$6, 6, 0, 126);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1916,21 +1917,21 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[4], false, false, false, false);
+    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[5], false, false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (default_slot) {
-    				if (default_slot.p && (!current || dirty & /*$$scope*/ 4)) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 8)) {
     					update_slot_base(
     						default_slot,
     						default_slot_template,
     						ctx,
-    						/*$$scope*/ ctx[2],
+    						/*$$scope*/ ctx[3],
     						!current
-    						? get_all_dirty_from_scope(/*$$scope*/ ctx[2])
-    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null),
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[3])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[3], dirty, null),
     						null
     					);
     				}
@@ -1940,16 +1941,20 @@ var app = (function () {
     				set_style(button, "margin-top", /*margin*/ ctx[0]);
     			}
 
-    			if (!current || dirty & /*color*/ 2) {
-    				toggle_class(button, "blue", /*color*/ ctx[1] === 'duolingo-button-blue');
+    			if (!current || dirty & /*marginBottom*/ 2) {
+    				set_style(button, "margin-bottom", /*marginBottom*/ ctx[1]);
     			}
 
-    			if (!current || dirty & /*color*/ 2) {
-    				toggle_class(button, "green", /*color*/ ctx[1] === 'duolingo-button-green');
+    			if (!current || dirty & /*color*/ 4) {
+    				toggle_class(button, "blue", /*color*/ ctx[2] === 'duolingo-button-blue');
     			}
 
-    			if (!current || dirty & /*color*/ 2) {
-    				toggle_class(button, "red", /*color*/ ctx[1] === 'duolingo-button-red');
+    			if (!current || dirty & /*color*/ 4) {
+    				toggle_class(button, "green", /*color*/ ctx[2] === 'duolingo-button-green');
+    			}
+
+    			if (!current || dirty & /*color*/ 4) {
+    				toggle_class(button, "red", /*color*/ ctx[2] === 'duolingo-button-red');
     			}
     		},
     		i: function intro(local) {
@@ -1984,8 +1989,9 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Button', slots, ['default']);
     	let { margin = 0 } = $$props;
+    	let { marginBottom = 0 } = $$props;
     	let { color = 'duolingo-button-blue' } = $$props;
-    	const writable_props = ['margin', 'color'];
+    	const writable_props = ['margin', 'marginBottom', 'color'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Button> was created with unknown prop '${key}'`);
@@ -1997,28 +2003,30 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('margin' in $$props) $$invalidate(0, margin = $$props.margin);
-    		if ('color' in $$props) $$invalidate(1, color = $$props.color);
-    		if ('$$scope' in $$props) $$invalidate(2, $$scope = $$props.$$scope);
+    		if ('marginBottom' in $$props) $$invalidate(1, marginBottom = $$props.marginBottom);
+    		if ('color' in $$props) $$invalidate(2, color = $$props.color);
+    		if ('$$scope' in $$props) $$invalidate(3, $$scope = $$props.$$scope);
     	};
 
-    	$$self.$capture_state = () => ({ margin, color });
+    	$$self.$capture_state = () => ({ margin, marginBottom, color });
 
     	$$self.$inject_state = $$props => {
     		if ('margin' in $$props) $$invalidate(0, margin = $$props.margin);
-    		if ('color' in $$props) $$invalidate(1, color = $$props.color);
+    		if ('marginBottom' in $$props) $$invalidate(1, marginBottom = $$props.marginBottom);
+    		if ('color' in $$props) $$invalidate(2, color = $$props.color);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [margin, color, $$scope, slots, click_handler];
+    	return [margin, marginBottom, color, $$scope, slots, click_handler];
     }
 
     class Button extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { margin: 0, color: 1 });
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { margin: 0, marginBottom: 1, color: 2 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2036,6 +2044,14 @@ var app = (function () {
     		throw new Error("<Button>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
+    	get marginBottom() {
+    		throw new Error("<Button>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set marginBottom(value) {
+    		throw new Error("<Button>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
     	get color() {
     		throw new Error("<Button>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
@@ -2050,7 +2066,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$5 = "src\\components\\GermanCourse.svelte";
 
-    // (149:4) {:else}
+    // (152:4) {:else}
     function create_else_block_1(ctx) {
     	let textarea;
     	let mounted;
@@ -2063,8 +2079,8 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-16t7yus");
-    			add_location(textarea, file$5, 149, 4, 4550);
+    			attr_dev(textarea, "class", "svelte-14trc7b");
+    			add_location(textarea, file$5, 152, 4, 4623);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2072,8 +2088,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(textarea, "input", /*textarea_input_handler_1*/ ctx[27]),
-    					listen_dev(textarea, "keypress", /*keypress_handler_2*/ ctx[28], false, false, false, false)
+    					listen_dev(textarea, "input", /*textarea_input_handler_1*/ ctx[28]),
+    					listen_dev(textarea, "keypress", /*keypress_handler_2*/ ctx[29], false, false, false, false)
     				];
 
     				mounted = true;
@@ -2095,14 +2111,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(149:4) {:else}",
+    		source: "(152:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (147:4) {#if readOnly == true}
+    // (150:4) {#if readOnly == true}
     function create_if_block_3$1(ctx) {
     	let textarea;
     	let mounted;
@@ -2116,8 +2132,8 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-16t7yus");
-    			add_location(textarea, file$5, 147, 4, 4369);
+    			attr_dev(textarea, "class", "svelte-14trc7b");
+    			add_location(textarea, file$5, 150, 4, 4442);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2125,8 +2141,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[25]),
-    					listen_dev(textarea, "keypress", /*keypress_handler_1*/ ctx[26], false, false, false, false)
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[26]),
+    					listen_dev(textarea, "keypress", /*keypress_handler_1*/ ctx[27], false, false, false, false)
     				];
 
     				mounted = true;
@@ -2148,14 +2164,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(147:4) {#if readOnly == true}",
+    		source: "(150:4) {#if readOnly == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (164:4) {:else}
+    // (167:4) {:else}
     function create_else_block(ctx) {
     	let div;
     	let button;
@@ -2165,22 +2181,23 @@ var app = (function () {
     			props: {
     				color: /*color*/ ctx[1],
     				margin: "" + (/*margin1*/ ctx[6] + "px"),
+    				marginBottom: "" + (/*marginBottom*/ ctx[9] + "px"),
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*click_handler_4*/ ctx[32]);
+    	button.$on("click", /*click_handler_4*/ ctx[33]);
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(div, "class", "colored-bottom svelte-16t7yus");
-    			set_style(div, "background", /*background*/ ctx[9]);
+    			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
+    			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 164, 6, 5673);
+    			add_location(div, file$5, 167, 6, 5842);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2191,15 +2208,16 @@ var app = (function () {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
     			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
+    			if (dirty[0] & /*marginBottom*/ 512) button_changes.marginBottom = "" + (/*marginBottom*/ ctx[9] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 256) {
+    			if (dirty[1] & /*$$scope*/ 512) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (!current || dirty[0] & /*background*/ 512) {
-    				set_style(div, "background", /*background*/ ctx[9]);
+    			if (!current || dirty[0] & /*background*/ 1024) {
+    				set_style(div, "background", /*background*/ ctx[10]);
     			}
 
     			if (!current || dirty[0] & /*margin3*/ 256) {
@@ -2225,21 +2243,21 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(164:4) {:else}",
+    		source: "(167:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (159:34) 
+    // (162:34) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let button;
     	let t0;
     	let p;
     	let t1;
-    	let t2_value = /*currentWord*/ ctx[10].german + "";
+    	let t2_value = /*currentWord*/ ctx[11].german + "";
     	let t2;
     	let current;
 
@@ -2247,13 +2265,14 @@ var app = (function () {
     			props: {
     				color: /*color*/ ctx[1],
     				margin: "" + (/*margin1*/ ctx[6] + "px"),
+    				marginBottom: "" + (/*marginBottom*/ ctx[9] + "px"),
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*click_handler_3*/ ctx[31]);
+    	button.$on("click", /*click_handler_3*/ ctx[32]);
 
     	const block = {
     		c: function create() {
@@ -2263,12 +2282,12 @@ var app = (function () {
     			p = element("p");
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
-    			attr_dev(p, "class", "wrong-answer svelte-16t7yus");
-    			add_location(p, file$5, 161, 8, 5566);
-    			attr_dev(div, "class", "colored-bottom svelte-16t7yus");
-    			set_style(div, "background", /*background*/ ctx[9]);
+    			attr_dev(p, "class", "wrong-answer svelte-14trc7b");
+    			add_location(p, file$5, 164, 8, 5735);
+    			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
+    			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 159, 6, 5369);
+    			add_location(div, file$5, 162, 6, 5506);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2283,16 +2302,17 @@ var app = (function () {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
     			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
+    			if (dirty[0] & /*marginBottom*/ 512) button_changes.marginBottom = "" + (/*marginBottom*/ ctx[9] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 256) {
+    			if (dirty[1] & /*$$scope*/ 512) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
-    			if ((!current || dirty[0] & /*currentWord*/ 1024) && t2_value !== (t2_value = /*currentWord*/ ctx[10].german + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty[0] & /*currentWord*/ 2048) && t2_value !== (t2_value = /*currentWord*/ ctx[11].german + "")) set_data_dev(t2, t2_value);
 
-    			if (!current || dirty[0] & /*background*/ 512) {
-    				set_style(div, "background", /*background*/ ctx[9]);
+    			if (!current || dirty[0] & /*background*/ 1024) {
+    				set_style(div, "background", /*background*/ ctx[10]);
     			}
 
     			if (!current || dirty[0] & /*margin3*/ 256) {
@@ -2318,14 +2338,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(159:34) ",
+    		source: "(162:34) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:42) 
+    // (159:42) 
     function create_if_block_1$1(ctx) {
     	let p;
     	let t1;
@@ -2337,13 +2357,14 @@ var app = (function () {
     			props: {
     				color: /*color*/ ctx[1],
     				margin: "" + (/*margin1*/ ctx[6] + "px"),
+    				marginBottom: "" + (/*marginBottom*/ ctx[9] + "px"),
     				$$slots: { default: [create_default_slot_1$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*click_handler_2*/ ctx[30]);
+    	button.$on("click", /*click_handler_2*/ ctx[31]);
 
     	const block = {
     		c: function create() {
@@ -2352,12 +2373,12 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "not-enough-characters svelte-16t7yus");
-    			add_location(p, file$5, 156, 6, 5061);
-    			attr_dev(div, "class", "colored-bottom svelte-16t7yus");
-    			set_style(div, "background", /*background*/ ctx[9]);
+    			attr_dev(p, "class", "not-enough-characters svelte-14trc7b");
+    			add_location(p, file$5, 159, 6, 5166);
+    			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
+    			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 157, 6, 5142);
+    			add_location(div, file$5, 160, 6, 5247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2370,15 +2391,16 @@ var app = (function () {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
     			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
+    			if (dirty[0] & /*marginBottom*/ 512) button_changes.marginBottom = "" + (/*marginBottom*/ ctx[9] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 256) {
+    			if (dirty[1] & /*$$scope*/ 512) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (!current || dirty[0] & /*background*/ 512) {
-    				set_style(div, "background", /*background*/ ctx[9]);
+    			if (!current || dirty[0] & /*background*/ 1024) {
+    				set_style(div, "background", /*background*/ ctx[10]);
     			}
 
     			if (!current || dirty[0] & /*margin2*/ 128) {
@@ -2406,14 +2428,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(156:42) ",
+    		source: "(159:42) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (153:4) {#if translatedCurrentWord.length > 174}
+    // (156:4) {#if translatedCurrentWord.length > 174}
     function create_if_block$1(ctx) {
     	let p;
     	let t1;
@@ -2425,13 +2447,14 @@ var app = (function () {
     			props: {
     				color: /*color*/ ctx[1],
     				margin: "" + (/*margin1*/ ctx[6] + "px"),
+    				marginBottom: "" + (/*marginBottom*/ ctx[9] + "px"),
     				$$slots: { default: [create_default_slot$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*click_handler_1*/ ctx[29]);
+    	button.$on("click", /*click_handler_1*/ ctx[30]);
 
     	const block = {
     		c: function create() {
@@ -2440,12 +2463,12 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "max-characters svelte-16t7yus");
-    			add_location(p, file$5, 153, 6, 4770);
-    			attr_dev(div, "class", "colored-bottom svelte-16t7yus");
-    			set_style(div, "background", /*background*/ ctx[9]);
+    			attr_dev(p, "class", "max-characters svelte-14trc7b");
+    			add_location(p, file$5, 156, 6, 4843);
+    			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
+    			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 154, 6, 4826);
+    			add_location(div, file$5, 157, 6, 4899);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2458,15 +2481,16 @@ var app = (function () {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
     			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
+    			if (dirty[0] & /*marginBottom*/ 512) button_changes.marginBottom = "" + (/*marginBottom*/ ctx[9] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 256) {
+    			if (dirty[1] & /*$$scope*/ 512) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (!current || dirty[0] & /*background*/ 512) {
-    				set_style(div, "background", /*background*/ ctx[9]);
+    			if (!current || dirty[0] & /*background*/ 1024) {
+    				set_style(div, "background", /*background*/ ctx[10]);
     			}
 
     			if (!current || dirty[0] & /*margin2*/ 128) {
@@ -2494,14 +2518,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(153:4) {#if translatedCurrentWord.length > 174}",
+    		source: "(156:4) {#if translatedCurrentWord.length > 174}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (165:92) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
+    // (168:92) <Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -2521,14 +2545,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(165:92) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
+    		source: "(168:92) <Button color={color} margin=\\\"{margin1}px\\\" marginBottom=\\\"{marginBottom}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (161:8) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
+    // (164:8) <Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -2548,14 +2572,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(161:8) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
+    		source: "(164:8) <Button color={color} margin=\\\"{margin1}px\\\" marginBottom=\\\"{marginBottom}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (158:92) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
+    // (161:92) <Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -2575,14 +2599,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(158:92) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
+    		source: "(161:92) <Button color={color} margin=\\\"{margin1}px\\\" marginBottom=\\\"{marginBottom}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:92) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
+    // (158:92) <Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -2602,7 +2626,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(155:92) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
+    		source: "(158:92) <Button color={color} margin=\\\"{margin1}px\\\" marginBottom=\\\"{marginBottom}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
@@ -2625,7 +2649,7 @@ var app = (function () {
     	let p0_outro;
     	let t4;
     	let p1;
-    	let t5_value = /*currentWord*/ ctx[10].french + "";
+    	let t5_value = /*currentWord*/ ctx[11].french + "";
     	let t5;
     	let t6;
     	let div5;
@@ -2648,7 +2672,7 @@ var app = (function () {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*translatedCurrentWord*/ ctx[0].length > 174) return 0;
-    		if (/*notEnoughCharacters*/ ctx[11] == true) return 1;
+    		if (/*notEnoughCharacters*/ ctx[12] == true) return 1;
     		if (/*wrongAnswer*/ ctx[3] == true) return 2;
     		return 3;
     	}
@@ -2678,28 +2702,28 @@ var app = (function () {
     			if_block0.c();
     			t7 = space();
     			if_block1.c();
-    			attr_dev(div0, "class", "pourcentage-contrast svelte-16t7yus");
-    			add_location(div0, file$5, 134, 6, 3893);
-    			attr_dev(div1, "class", "pourcentage svelte-16t7yus");
-    			set_style(div1, "width", /*$tweenedScore*/ ctx[12] + "%");
-    			add_location(div1, file$5, 133, 4, 3827);
-    			attr_dev(div2, "class", "course-pourcentage svelte-16t7yus");
-    			add_location(div2, file$5, 132, 2, 3789);
-    			attr_dev(h2, "class", "svelte-16t7yus");
-    			add_location(h2, file$5, 138, 4, 3991);
-    			attr_dev(p0, "class", "help svelte-16t7yus");
+    			attr_dev(div0, "class", "pourcentage-contrast svelte-14trc7b");
+    			add_location(div0, file$5, 137, 6, 3966);
+    			attr_dev(div1, "class", "pourcentage svelte-14trc7b");
+    			set_style(div1, "width", /*$tweenedScore*/ ctx[13] + "%");
+    			add_location(div1, file$5, 136, 4, 3900);
+    			attr_dev(div2, "class", "course-pourcentage svelte-14trc7b");
+    			add_location(div2, file$5, 135, 2, 3862);
+    			attr_dev(h2, "class", "svelte-14trc7b");
+    			add_location(h2, file$5, 141, 4, 4064);
+    			attr_dev(p0, "class", "help svelte-14trc7b");
     			attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
-    			add_location(p0, file$5, 140, 6, 4052);
-    			attr_dev(p1, "class", "words svelte-16t7yus");
-    			add_location(p1, file$5, 142, 6, 4202);
-    			attr_dev(div3, "class", "words-container svelte-16t7yus");
-    			add_location(div3, file$5, 139, 4, 4015);
-    			attr_dev(div4, "class", "orinal-words svelte-16t7yus");
-    			add_location(div4, file$5, 137, 2, 3959);
-    			attr_dev(div5, "class", "translate-to-french svelte-16t7yus");
-    			add_location(div5, file$5, 145, 2, 4302);
-    			attr_dev(div6, "class", "course svelte-16t7yus");
-    			add_location(div6, file$5, 131, 0, 3765);
+    			add_location(p0, file$5, 143, 6, 4125);
+    			attr_dev(p1, "class", "words svelte-14trc7b");
+    			add_location(p1, file$5, 145, 6, 4275);
+    			attr_dev(div3, "class", "words-container svelte-14trc7b");
+    			add_location(div3, file$5, 142, 4, 4088);
+    			attr_dev(div4, "class", "orinal-words svelte-14trc7b");
+    			add_location(div4, file$5, 140, 2, 4032);
+    			attr_dev(div5, "class", "translate-to-french svelte-14trc7b");
+    			add_location(div5, file$5, 148, 2, 4375);
+    			attr_dev(div6, "class", "course svelte-14trc7b");
+    			add_location(div6, file$5, 134, 0, 3838);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2728,16 +2752,16 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(window, "keypress", /*keypress_handler*/ ctx[23], false, false, false, false),
-    					listen_dev(p1, "click", /*click_handler*/ ctx[24], false, false, false, false)
+    					listen_dev(window, "keypress", /*keypress_handler*/ ctx[24], false, false, false, false),
+    					listen_dev(p1, "click", /*click_handler*/ ctx[25], false, false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*$tweenedScore*/ 4096) {
-    				set_style(div1, "width", /*$tweenedScore*/ ctx[12] + "%");
+    			if (!current || dirty[0] & /*$tweenedScore*/ 8192) {
+    				set_style(div1, "width", /*$tweenedScore*/ ctx[13] + "%");
     			}
 
     			if (!current || dirty[0] & /*showWords*/ 32) set_data_dev(t3, /*showWords*/ ctx[5]);
@@ -2746,7 +2770,7 @@ var app = (function () {
     				attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
     			}
 
-    			if ((!current || dirty[0] & /*currentWord*/ 1024) && t5_value !== (t5_value = /*currentWord*/ ctx[10].french + "")) set_data_dev(t5, t5_value);
+    			if ((!current || dirty[0] & /*currentWord*/ 2048) && t5_value !== (t5_value = /*currentWord*/ ctx[11].french + "")) set_data_dev(t5, t5_value);
 
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block0) {
     				if_block0.p(ctx, dirty);
@@ -2839,7 +2863,7 @@ var app = (function () {
     	let $selectedGermanWords;
     	let $tweenedScore;
     	validate_store(selectedGermanWords, 'selectedGermanWords');
-    	component_subscribe($$self, selectedGermanWords, $$value => $$invalidate(22, $selectedGermanWords = $$value));
+    	component_subscribe($$self, selectedGermanWords, $$value => $$invalidate(23, $selectedGermanWords = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('GermanCourse', slots, []);
     	let score = 0;
@@ -2855,12 +2879,13 @@ var app = (function () {
     	let margin1 = 80;
     	let margin2 = 75;
     	let margin3 = 100;
+    	let marginBottom = 80;
     	let width = screen.width;
     	let height = screen.height;
     	let background = "#f8f8f8";
     	const tweenedScore = tweened(0);
     	validate_store(tweenedScore, 'tweenedScore');
-    	component_subscribe($$self, tweenedScore, value => $$invalidate(12, $tweenedScore = value));
+    	component_subscribe($$self, tweenedScore, value => $$invalidate(13, $tweenedScore = value));
 
     	onMount(() => {
     		updateCurrentWord();
@@ -2885,18 +2910,18 @@ var app = (function () {
     	};
 
     	const updateCurrentWord = () => {
-    		$$invalidate(10, currentWord = $selectedGermanWords[Math.floor(Math.random() * $selectedGermanWords.length)]);
+    		$$invalidate(11, currentWord = $selectedGermanWords[Math.floor(Math.random() * $selectedGermanWords.length)]);
     	};
 
     	const submitWord = () => {
     		if (translatedCurrentWordWithoutMisspeling.length < 1) {
-    			$$invalidate(11, notEnoughCharacters = true);
+    			$$invalidate(12, notEnoughCharacters = true);
     		} else if (continueBtn == true) {
     			if (lessonEnd == false) {
     				continueBtn = false;
     				$$invalidate(1, color = 'duolingo-button-green');
-    				$$invalidate(11, notEnoughCharacters = false);
-    				$$invalidate(9, background = "#f8f8f8");
+    				$$invalidate(12, notEnoughCharacters = false);
+    				$$invalidate(10, background = "#f8f8f8");
     				$$invalidate(0, translatedCurrentWord = "");
     				$$invalidate(2, readOnly = false);
     				$$invalidate(3, wrongAnswer = false);
@@ -2910,19 +2935,19 @@ var app = (function () {
     				return selectedWords.filter(word => word.id !== currentWord.id);
     			});
 
-    			$$invalidate(18, score++, score);
-    			$$invalidate(9, background = "#d7ffb8");
+    			$$invalidate(19, score++, score);
+    			$$invalidate(10, background = "#d7ffb8");
     			$$invalidate(1, color = 'duolingo-button-green');
-    			$$invalidate(11, notEnoughCharacters = false);
+    			$$invalidate(12, notEnoughCharacters = false);
     			continueBtn = true;
     			$$invalidate(2, readOnly = true);
 
     			if ($selectedGermanWords.length == 0) {
-    				$$invalidate(20, lessonEnd = true);
+    				$$invalidate(21, lessonEnd = true);
     			}
     		} else {
-    			$$invalidate(9, background = "#ffb2b2");
-    			$$invalidate(11, notEnoughCharacters = false);
+    			$$invalidate(10, background = "#ffb2b2");
+    			$$invalidate(12, notEnoughCharacters = false);
     			$$invalidate(1, color = 'duolingo-button-red');
     			continueBtn = true;
     			$$invalidate(2, readOnly = true);
@@ -2995,6 +3020,7 @@ var app = (function () {
     		margin1,
     		margin2,
     		margin3,
+    		marginBottom,
     		width,
     		height,
     		background,
@@ -3014,10 +3040,10 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('score' in $$props) $$invalidate(18, score = $$props.score);
-    		if ('scorePercentage' in $$props) $$invalidate(19, scorePercentage = $$props.scorePercentage);
+    		if ('score' in $$props) $$invalidate(19, score = $$props.score);
+    		if ('scorePercentage' in $$props) $$invalidate(20, scorePercentage = $$props.scorePercentage);
     		if ('color' in $$props) $$invalidate(1, color = $$props.color);
-    		if ('lessonEnd' in $$props) $$invalidate(20, lessonEnd = $$props.lessonEnd);
+    		if ('lessonEnd' in $$props) $$invalidate(21, lessonEnd = $$props.lessonEnd);
     		if ('readOnly' in $$props) $$invalidate(2, readOnly = $$props.readOnly);
     		if ('wrongAnswer' in $$props) $$invalidate(3, wrongAnswer = $$props.wrongAnswer);
     		if ('continueBtn' in $$props) continueBtn = $$props.continueBtn;
@@ -3026,13 +3052,14 @@ var app = (function () {
     		if ('margin1' in $$props) $$invalidate(6, margin1 = $$props.margin1);
     		if ('margin2' in $$props) $$invalidate(7, margin2 = $$props.margin2);
     		if ('margin3' in $$props) $$invalidate(8, margin3 = $$props.margin3);
-    		if ('width' in $$props) $$invalidate(36, width = $$props.width);
-    		if ('height' in $$props) $$invalidate(37, height = $$props.height);
-    		if ('background' in $$props) $$invalidate(9, background = $$props.background);
+    		if ('marginBottom' in $$props) $$invalidate(9, marginBottom = $$props.marginBottom);
+    		if ('width' in $$props) $$invalidate(37, width = $$props.width);
+    		if ('height' in $$props) $$invalidate(38, height = $$props.height);
+    		if ('background' in $$props) $$invalidate(10, background = $$props.background);
     		if ('wordHelp' in $$props) wordHelp = $$props.wordHelp;
-    		if ('currentWord' in $$props) $$invalidate(10, currentWord = $$props.currentWord);
-    		if ('notEnoughCharacters' in $$props) $$invalidate(11, notEnoughCharacters = $$props.notEnoughCharacters);
-    		if ('translatedCurrentWordWithoutMisspeling' in $$props) $$invalidate(21, translatedCurrentWordWithoutMisspeling = $$props.translatedCurrentWordWithoutMisspeling);
+    		if ('currentWord' in $$props) $$invalidate(11, currentWord = $$props.currentWord);
+    		if ('notEnoughCharacters' in $$props) $$invalidate(12, notEnoughCharacters = $$props.notEnoughCharacters);
+    		if ('translatedCurrentWordWithoutMisspeling' in $$props) $$invalidate(22, translatedCurrentWordWithoutMisspeling = $$props.translatedCurrentWordWithoutMisspeling);
     		if ('translatedCurrentWord' in $$props) $$invalidate(0, translatedCurrentWord = $$props.translatedCurrentWord);
     	};
 
@@ -3042,42 +3069,44 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty[0] & /*translatedCurrentWord*/ 1) {
-    			$$invalidate(21, translatedCurrentWordWithoutMisspeling = translatedCurrentWord.toLowerCase().split(" ").join(""));
+    			$$invalidate(22, translatedCurrentWordWithoutMisspeling = translatedCurrentWord.toLowerCase().split(" ").join(""));
     		}
 
-    		if ($$self.$$.dirty[0] & /*translatedCurrentWordWithoutMisspeling*/ 2097152) {
+    		if ($$self.$$.dirty[0] & /*translatedCurrentWordWithoutMisspeling*/ 4194304) {
     			if (translatedCurrentWordWithoutMisspeling.length >= 1) {
-    				$$invalidate(11, notEnoughCharacters = false);
+    				$$invalidate(12, notEnoughCharacters = false);
     			}
     		}
 
-    		if ($$self.$$.dirty[0] & /*score*/ 262144) {
-    			$$invalidate(19, scorePercentage = score / totalWords * 100);
+    		if ($$self.$$.dirty[0] & /*score*/ 524288) {
+    			$$invalidate(20, scorePercentage = score / totalWords * 100);
     		}
 
-    		if ($$self.$$.dirty[0] & /*scorePercentage*/ 524288) {
+    		if ($$self.$$.dirty[0] & /*scorePercentage*/ 1048576) {
     			tweenedScore.set(scorePercentage);
     		}
 
-    		if ($$self.$$.dirty[0] & /*scorePercentage, score, $selectedGermanWords, lessonEnd*/ 6029312) {
+    		if ($$self.$$.dirty[0] & /*scorePercentage, score, $selectedGermanWords, lessonEnd*/ 12058624) {
     			console.log(scorePercentage, score, $selectedGermanWords, lessonEnd);
     		}
     	};
 
-    	$$invalidate(11, notEnoughCharacters = false);
+    	$$invalidate(12, notEnoughCharacters = false);
     	wordHelp = false;
 
     	if (width < 1200 && height < 2550) {
     		$$invalidate(6, margin1 = 65);
     		$$invalidate(7, margin2 = 25);
     		$$invalidate(8, margin3 = 50);
+    		$$invalidate(9, marginBottom = 0);
     	} else {
     		$$invalidate(6, margin1 = 80);
     		$$invalidate(7, margin2 = 75);
     		$$invalidate(8, margin3 = 100);
+    		$$invalidate(9, marginBottom = 80);
     	}
 
-    	$$invalidate(10, currentWord = "");
+    	$$invalidate(11, currentWord = "");
     	$$invalidate(0, translatedCurrentWord = "");
 
     	return [
@@ -3090,6 +3119,7 @@ var app = (function () {
     		margin1,
     		margin2,
     		margin3,
+    		marginBottom,
     		background,
     		currentWord,
     		notEnoughCharacters,

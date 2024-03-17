@@ -22,16 +22,19 @@
   let margin1 = 80;
   let margin2 = 75;
   let margin3 = 100;
+  let marginBottom = 80;
   let width = screen.width;
   let height = screen.height;
   $: if (width < 1200 && height < 2550) {
     margin1 = 65
     margin2 = 25
     margin3 = 50
+    marginBottom = 0;
   } else {
     margin1 = 80
     margin2 = 75;
     margin3 = 100;
+    marginBottom = 80;
   }
 
   $: currentWord = "";
@@ -152,17 +155,17 @@
 
     {#if translatedCurrentWord.length > 174}
       <p class="max-characters">Calme, stresse pas</p>
-      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>Confirmer</Button></div>
     {:else if notEnoughCharacters == true}
       <p class="not-enough-characters">Il doit y avoir plus d'un charactère</p>
-      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>Confirmer</Button></div>
     {:else if wrongAnswer == true}
       <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px">
-        <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button>
+        <Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>Confirmer</Button>
         <p class="wrong-answer">La bonne réponse était: {currentWord.german}</p>
       </div>
     {:else}
-      <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px" marginBottom="{marginBottom}px" on:click={() => submitWord()}>Confirmer</Button></div>
     {/if}
   </div>
 </div>
@@ -256,7 +259,7 @@
     font-size: 0.9rem;
   }
   .colored-bottom {
-    height: calc(45vh - 101px);
+    height: 50vh;
     width: 100%;
   }
   .wrong-answer {
@@ -305,6 +308,7 @@
       padding: 3px 3vwpx;
     }
     .colored-bottom {
+      height: calc(45vh - 101px);
       margin-top: 5px;
     }
     .wrong-answer {
