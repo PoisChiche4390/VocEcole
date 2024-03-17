@@ -1896,7 +1896,7 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			if (default_slot) default_slot.c();
-    			set_style(button, "margin", /*margin*/ ctx[0]);
+    			set_style(button, "margin-top", /*margin*/ ctx[0]);
     			attr_dev(button, "class", "svelte-zynsvf");
     			toggle_class(button, "blue", /*color*/ ctx[1] === 'duolingo-button-blue');
     			toggle_class(button, "green", /*color*/ ctx[1] === 'duolingo-button-green');
@@ -1937,7 +1937,7 @@ var app = (function () {
     			}
 
     			if (!current || dirty & /*margin*/ 1) {
-    				set_style(button, "margin", /*margin*/ ctx[0]);
+    				set_style(button, "margin-top", /*margin*/ ctx[0]);
     			}
 
     			if (!current || dirty & /*color*/ 2) {
@@ -2050,7 +2050,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$5 = "src\\components\\GermanCourse.svelte";
 
-    // (152:4) {:else}
+    // (149:4) {:else}
     function create_else_block_1(ctx) {
     	let textarea;
     	let mounted;
@@ -2063,8 +2063,8 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-oy6zat");
-    			add_location(textarea, file$5, 152, 4, 4673);
+    			attr_dev(textarea, "class", "svelte-1h4wvtc");
+    			add_location(textarea, file$5, 149, 4, 4550);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2095,14 +2095,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(152:4) {:else}",
+    		source: "(149:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:4) {#if readOnly == true}
+    // (147:4) {#if readOnly == true}
     function create_if_block_3$1(ctx) {
     	let textarea;
     	let mounted;
@@ -2116,8 +2116,8 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-oy6zat");
-    			add_location(textarea, file$5, 150, 4, 4492);
+    			attr_dev(textarea, "class", "svelte-1h4wvtc");
+    			add_location(textarea, file$5, 147, 4, 4369);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2148,14 +2148,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(150:4) {#if readOnly == true}",
+    		source: "(147:4) {#if readOnly == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (167:4) {:else}
+    // (164:4) {:else}
     function create_else_block(ctx) {
     	let div;
     	let button;
@@ -2164,7 +2164,7 @@ var app = (function () {
     	button = new Button({
     			props: {
     				color: /*color*/ ctx[1],
-    				margin: "" + (/*margin1*/ ctx[6] + "px 0"),
+    				margin: "" + (/*margin1*/ ctx[6] + "px"),
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
@@ -2177,10 +2177,10 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(div, "class", "colored-bottom svelte-oy6zat");
+    			attr_dev(div, "class", "colored-bottom svelte-1h4wvtc");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 167, 6, 5799);
+    			add_location(div, file$5, 164, 6, 5673);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2190,9 +2190,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
-    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px 0");
+    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 256) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2225,14 +2225,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(167:4) {:else}",
+    		source: "(164:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (162:34) 
+    // (159:34) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let button;
@@ -2246,7 +2246,7 @@ var app = (function () {
     	button = new Button({
     			props: {
     				color: /*color*/ ctx[1],
-    				margin: "" + (/*margin1*/ ctx[6] + "px 0"),
+    				margin: "" + (/*margin1*/ ctx[6] + "px"),
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
@@ -2263,12 +2263,12 @@ var app = (function () {
     			p = element("p");
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
-    			attr_dev(p, "class", "wrong-answer svelte-oy6zat");
-    			add_location(p, file$5, 164, 6, 5694);
-    			attr_dev(div, "class", "colored-bottom svelte-oy6zat");
+    			attr_dev(p, "class", "wrong-answer svelte-1h4wvtc");
+    			add_location(p, file$5, 161, 8, 5566);
+    			attr_dev(div, "class", "colored-bottom svelte-1h4wvtc");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 162, 4, 5499);
+    			add_location(div, file$5, 159, 6, 5369);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2282,9 +2282,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
-    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px 0");
+    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 256) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2318,14 +2318,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(162:34) ",
+    		source: "(159:34) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (159:42) 
+    // (156:42) 
     function create_if_block_1$1(ctx) {
     	let p;
     	let t1;
@@ -2336,7 +2336,7 @@ var app = (function () {
     	button = new Button({
     			props: {
     				color: /*color*/ ctx[1],
-    				margin: "" + (/*margin1*/ ctx[6] + "px 0"),
+    				margin: "" + (/*margin1*/ ctx[6] + "px"),
     				$$slots: { default: [create_default_slot_1$1] },
     				$$scope: { ctx }
     			},
@@ -2352,12 +2352,12 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "not-enough-characters svelte-oy6zat");
-    			add_location(p, file$5, 159, 6, 5186);
-    			attr_dev(div, "class", "colored-bottom svelte-oy6zat");
+    			attr_dev(p, "class", "not-enough-characters svelte-1h4wvtc");
+    			add_location(p, file$5, 156, 6, 5061);
+    			attr_dev(div, "class", "colored-bottom svelte-1h4wvtc");
     			set_style(div, "background", /*background*/ ctx[9]);
-    			set_style(div, "margin-top", /*margin1*/ ctx[6] - 25 + "px");
-    			add_location(div, file$5, 160, 6, 5267);
+    			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
+    			add_location(div, file$5, 157, 6, 5142);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2369,9 +2369,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
-    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px 0");
+    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 256) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2381,8 +2381,8 @@ var app = (function () {
     				set_style(div, "background", /*background*/ ctx[9]);
     			}
 
-    			if (!current || dirty[0] & /*margin1*/ 64) {
-    				set_style(div, "margin-top", /*margin1*/ ctx[6] - 25 + "px");
+    			if (!current || dirty[0] & /*margin2*/ 128) {
+    				set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
     			}
     		},
     		i: function intro(local) {
@@ -2406,14 +2406,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(159:42) ",
+    		source: "(156:42) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:4) {#if translatedCurrentWord.length > 174}
+    // (153:4) {#if translatedCurrentWord.length > 174}
     function create_if_block$1(ctx) {
     	let p;
     	let t1;
@@ -2424,7 +2424,7 @@ var app = (function () {
     	button = new Button({
     			props: {
     				color: /*color*/ ctx[1],
-    				margin: "" + (/*margin1*/ ctx[6] + "px 0"),
+    				margin: "" + (/*margin1*/ ctx[6] + "px"),
     				$$slots: { default: [create_default_slot$1] },
     				$$scope: { ctx }
     			},
@@ -2440,12 +2440,12 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "max-characters svelte-oy6zat");
-    			add_location(p, file$5, 156, 6, 4893);
-    			attr_dev(div, "class", "colored-bottom svelte-oy6zat");
+    			attr_dev(p, "class", "max-characters svelte-1h4wvtc");
+    			add_location(p, file$5, 153, 6, 4770);
+    			attr_dev(div, "class", "colored-bottom svelte-1h4wvtc");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 157, 6, 4949);
+    			add_location(div, file$5, 154, 6, 4826);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2457,9 +2457,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
     			if (dirty[0] & /*color*/ 2) button_changes.color = /*color*/ ctx[1];
-    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px 0");
+    			if (dirty[0] & /*margin1*/ 64) button_changes.margin = "" + (/*margin1*/ ctx[6] + "px");
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 256) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2494,14 +2494,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(156:4) {#if translatedCurrentWord.length > 174}",
+    		source: "(153:4) {#if translatedCurrentWord.length > 174}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:92) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (165:92) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -2521,14 +2521,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(168:92) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(165:92) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (164:6) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (161:8) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -2548,14 +2548,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(164:6) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(161:8) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (161:97) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (158:92) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -2575,14 +2575,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(161:97) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(158:92) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (158:92) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (155:92) <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -2602,7 +2602,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(158:92) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(155:92) <Button color={color} margin=\\\"{margin1}px\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
@@ -2678,28 +2678,28 @@ var app = (function () {
     			if_block0.c();
     			t7 = space();
     			if_block1.c();
-    			attr_dev(div0, "class", "pourcentage-contrast svelte-oy6zat");
-    			add_location(div0, file$5, 137, 6, 4016);
-    			attr_dev(div1, "class", "pourcentage svelte-oy6zat");
+    			attr_dev(div0, "class", "pourcentage-contrast svelte-1h4wvtc");
+    			add_location(div0, file$5, 134, 6, 3893);
+    			attr_dev(div1, "class", "pourcentage svelte-1h4wvtc");
     			set_style(div1, "width", /*$tweenedScore*/ ctx[12] + "%");
-    			add_location(div1, file$5, 136, 4, 3950);
-    			attr_dev(div2, "class", "course-pourcentage svelte-oy6zat");
-    			add_location(div2, file$5, 135, 2, 3912);
-    			attr_dev(h2, "class", "svelte-oy6zat");
-    			add_location(h2, file$5, 141, 4, 4114);
-    			attr_dev(p0, "class", "help svelte-oy6zat");
+    			add_location(div1, file$5, 133, 4, 3827);
+    			attr_dev(div2, "class", "course-pourcentage svelte-1h4wvtc");
+    			add_location(div2, file$5, 132, 2, 3789);
+    			attr_dev(h2, "class", "svelte-1h4wvtc");
+    			add_location(h2, file$5, 138, 4, 3991);
+    			attr_dev(p0, "class", "help svelte-1h4wvtc");
     			attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
-    			add_location(p0, file$5, 143, 6, 4175);
-    			attr_dev(p1, "class", "words svelte-oy6zat");
-    			add_location(p1, file$5, 145, 6, 4325);
-    			attr_dev(div3, "class", "words-container svelte-oy6zat");
-    			add_location(div3, file$5, 142, 4, 4138);
-    			attr_dev(div4, "class", "orinal-words svelte-oy6zat");
-    			add_location(div4, file$5, 140, 2, 4082);
-    			attr_dev(div5, "class", "translate-to-french svelte-oy6zat");
-    			add_location(div5, file$5, 148, 2, 4425);
-    			attr_dev(div6, "class", "course svelte-oy6zat");
-    			add_location(div6, file$5, 134, 0, 3888);
+    			add_location(p0, file$5, 140, 6, 4052);
+    			attr_dev(p1, "class", "words svelte-1h4wvtc");
+    			add_location(p1, file$5, 142, 6, 4202);
+    			attr_dev(div3, "class", "words-container svelte-1h4wvtc");
+    			add_location(div3, file$5, 139, 4, 4015);
+    			attr_dev(div4, "class", "orinal-words svelte-1h4wvtc");
+    			add_location(div4, file$5, 137, 2, 3959);
+    			attr_dev(div5, "class", "translate-to-french svelte-1h4wvtc");
+    			add_location(div5, file$5, 145, 2, 4302);
+    			attr_dev(div6, "class", "course svelte-1h4wvtc");
+    			add_location(div6, file$5, 131, 0, 3765);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2842,8 +2842,6 @@ var app = (function () {
     	component_subscribe($$self, selectedGermanWords, $$value => $$invalidate(22, $selectedGermanWords = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('GermanCourse', slots, []);
-    	const dispatch = createEventDispatcher();
-    	const delay = ms => new Promise(res => setTimeout(res, ms));
     	let score = 0;
     	let scorePercentage = 0;
     	let color = 'duolingo-button-green';
@@ -2984,9 +2982,6 @@ var app = (function () {
     		onDestroy,
     		Button,
     		selectedGermanWords,
-    		createEventDispatcher,
-    		dispatch,
-    		delay,
     		score,
     		scorePercentage,
     		color,
@@ -3031,8 +3026,8 @@ var app = (function () {
     		if ('margin1' in $$props) $$invalidate(6, margin1 = $$props.margin1);
     		if ('margin2' in $$props) $$invalidate(7, margin2 = $$props.margin2);
     		if ('margin3' in $$props) $$invalidate(8, margin3 = $$props.margin3);
-    		if ('width' in $$props) $$invalidate(38, width = $$props.width);
-    		if ('height' in $$props) $$invalidate(39, height = $$props.height);
+    		if ('width' in $$props) $$invalidate(36, width = $$props.width);
+    		if ('height' in $$props) $$invalidate(37, height = $$props.height);
     		if ('background' in $$props) $$invalidate(9, background = $$props.background);
     		if ('wordHelp' in $$props) wordHelp = $$props.wordHelp;
     		if ('currentWord' in $$props) $$invalidate(10, currentWord = $$props.currentWord);
@@ -3073,11 +3068,13 @@ var app = (function () {
     	wordHelp = false;
 
     	if (width < 1200 && height < 2550) {
-    		$$invalidate(6, margin1 = 50);
-    		$$invalidate(7, margin2 = 50);
+    		$$invalidate(6, margin1 = 65);
+    		$$invalidate(7, margin2 = 25);
     		$$invalidate(8, margin3 = 50);
     	} else {
     		$$invalidate(6, margin1 = 80);
+    		$$invalidate(7, margin2 = 75);
+    		$$invalidate(8, margin3 = 100);
     	}
 
     	$$invalidate(10, currentWord = "");
@@ -3900,7 +3897,7 @@ var app = (function () {
 
     	button1 = new Button({
     			props: {
-    				margin: "45px 0",
+    				margin: "40px",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -4140,27 +4137,27 @@ var app = (function () {
     			t3 = space();
     			script3 = element("script");
     			attr_dev(button, "class", "svelte-1vt1fw8");
-    			add_location(button, file, 121, 6, 3203);
+    			add_location(button, file, 121, 6, 3201);
     			set_custom_element_data(ion_icon, "name", "close-outline");
     			set_custom_element_data(ion_icon, "class", "close-page-image svelte-1vt1fw8");
     			set_style(ion_icon, "color", /*colorCloseBackgroundColorPage*/ ctx[5]);
-    			add_location(ion_icon, file, 122, 6, 3274);
+    			add_location(ion_icon, file, 122, 6, 3272);
     			attr_dev(label, "class", "svelte-1vt1fw8");
-    			add_location(label, file, 120, 5, 3189);
+    			add_location(label, file, 120, 5, 3187);
     			attr_dev(script0, "type", "module");
     			if (!src_url_equal(script0.src, script0_src_value = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file, 124, 5, 3409);
+    			add_location(script0, file, 124, 5, 3407);
     			script1.noModule = true;
     			if (!src_url_equal(script1.src, script1_src_value = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file, 125, 6, 3516);
+    			add_location(script1, file, 125, 6, 3514);
     			attr_dev(script2, "type", "module");
     			if (!src_url_equal(script2.src, script2_src_value = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file, 125, 97, 3607);
+    			add_location(script2, file, 125, 97, 3605);
     			script3.noModule = true;
     			if (!src_url_equal(script3.src, script3_src_value = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file, 126, 6, 3714);
+    			add_location(script3, file, 126, 6, 3712);
     			attr_dev(div, "class", "close-page svelte-1vt1fw8");
-    			add_location(div, file, 119, 4, 3159);
+    			add_location(div, file, 119, 4, 3157);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4282,7 +4279,7 @@ var app = (function () {
     	return block;
     }
 
-    // (114:3) <Button margin="45px 0" on:click={() => startCourse()}>
+    // (114:3) <Button margin="40px" on:click={() => startCourse()}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -4302,7 +4299,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(114:3) <Button margin=\\\"45px 0\\\" on:click={() => startCourse()}>",
+    		source: "(114:3) <Button margin=\\\"40px\\\" on:click={() => startCourse()}>",
     		ctx
     	});
 
@@ -4318,7 +4315,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "selectionez au moins 1 mot";
     			attr_dev(p, "class", "not-enough-selected-words svelte-1vt1fw8");
-    			add_location(p, file, 115, 4, 2935);
+    			add_location(p, file, 115, 4, 2933);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);

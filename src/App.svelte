@@ -111,7 +111,7 @@
 					<EnglishWords />
 				{/if}
 			</div>
-			<Button margin="45px 0" on:click={() => startCourse()}>Commencer</Button>
+			<Button margin="40px" on:click={() => startCourse()}>Commencer</Button>
 			{#if notEnoughSelectedWords == true}
 				<p class="not-enough-selected-words">selectionez au moins 1 mot</p>
 			{/if}

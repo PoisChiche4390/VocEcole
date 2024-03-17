@@ -5,11 +5,6 @@
   import { onDestroy } from 'svelte';
   import Button from '../shared/Button.svelte'
   import selectedGermanWords from '../stores/selectedGermanWords';
-  import { createEventDispatcher } from 'svelte'
-
-  const dispatch = createEventDispatcher()
-
-  const delay = ms => new Promise(res => setTimeout(res, ms));
 
   let score = 0;
   let scorePercentage = 0;
@@ -30,11 +25,13 @@
   let width = screen.width;
   let height = screen.height;
   $: if (width < 1200 && height < 2550) {
-    margin1 = 50
-    margin2 = 50
+    margin1 = 65
+    margin2 = 25
     margin3 = 50
   } else {
     margin1 = 80
+    margin2 = 75;
+    margin3 = 100;
   }
 
   $: currentWord = "";
@@ -155,17 +152,17 @@
 
     {#if translatedCurrentWord.length > 174}
       <p class="max-characters">Calme, stresse pas</p>
-      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button></div>
     {:else if notEnoughCharacters == true}
       <p class="not-enough-characters">Il doit y avoir plus d'un charactère</p>
-      <div class="colored-bottom" style="background: {background}; margin-top: {margin1 - 25}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button></div>
     {:else if wrongAnswer == true}
-    <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px">
-      <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button>
-      <p class="wrong-answer">La bonne réponse était: {currentWord.german}</p>
-    </div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px">
+        <Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button>
+        <p class="wrong-answer">La bonne réponse était: {currentWord.german}</p>
+      </div>
     {:else}
-      <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
+      <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px" on:click={() => submitWord()}>Confirmer</Button></div>
     {/if}
   </div>
 </div>
@@ -259,7 +256,7 @@
     font-size: 0.9rem;
   }
   .colored-bottom {
-    height: 28vh;
+    height: 50vh;
     width: 100%;
   }
   .wrong-answer {
@@ -303,7 +300,7 @@
       width: 92vw;
       height: 20vh;
       font-size: 0.9rem;
-      padding: 3px 15px;
+      padding: 3px 3vwpx;
     }
     .colored-bottom {
       margin-top: 5px;
