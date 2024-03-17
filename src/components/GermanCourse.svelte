@@ -256,7 +256,7 @@
     font-size: 0.9rem;
   }
   .colored-bottom {
-    height: 50vh;
+    height: calc(45vh - 101px);
     width: 100%;
   }
   .wrong-answer {
