@@ -60,14 +60,14 @@ const germanWords = writable([
     forLesson: true,
     german: 'teilen, teilt, hat geteilt',
     germanWithoutMisspeling: 'teilen,teilt,hatgeteilt',
-    french: 'partager'
+    french: 'partager (3 formes)'
   },
   {
     id: 10,
     forLesson: true,
     german: 'brauchen, braucht, hat gebraucht',
     germanWithoutMisspeling: 'brauchen,braucht,hatgebraucht',
-    french: 'avoir besoin de'
+    french: 'avoir besoin de (3 formes)'
   },
   {
     id: 11,
@@ -86,11 +86,80 @@ const germanWords = writable([
   {
     id: 13,
     forLesson: true,
+    german: 'verzichten auf, verzichtet, hat verzichtet',
+    germanWithoutMisspeling: 'verzichtenauf,verzichtet,hatverzichtet',
+    french: 'renoncer à (3 formes)'
+  },
+  {
+    id: 14,
+    forLesson: true,
+    german: 'Ich möchte nicht auf meine Musik verzichten.',
+    germanWithoutMisspeling: 'ichmöchtenichtaufmeinemusikverzichten.',
+    french: 'Je ne voudrais pas renoncer à ma musique.'
+  },
+  {
+    id: 15,
+    forLesson: true,
+    german: 'besitzen, besitzt, besass, hat besessen',
+    germanWithoutMisspeling: 'besitzenbesitztbesasshatbesessen',
+    french: 'posséder (4 formes)'
+  },
+  {
+    id: 16,
+    forLesson: true,
+    german: 'Er besitzt ein Haus.',
+    germanWithoutMisspeling: 'erbesitzteinhaus.',
+    french: 'Il possède une maison.'
+  },
+  {
+    id: 17,
+    forLesson: true,
+    german: 'Ich habe nicht viel/genug Platz.',
+    germanWithoutMisspeling: 'ichhabenichtviel/genugplatz.',
+    french: "Je n'ai pas beaucoup/assez de place."
+  },
+  {
+    id: 18,
+    forLesson: true,
+    german: 'Ich habe (sehr) wenig Platz.',
+    germanWithoutMisspeling: 'ichhabe(sehr)wenigplatz.',
+    french: "J'ai (très) peu de place."
+  },
+  {
+    id: 19,
+    forLesson: true,
+    german: 'verdienen, verdient, hat verdient',
+    germanWithoutMisspeling: 'verdienen,verdient,hatverdient',
+    french: "gagner de l'argent (3 formes)"
+  },
+  {
+    id: 20,
+    forLesson: true,
     german: '',
     germanWithoutMisspeling: '',
     french: ''
   },
-  
+  {
+    id: 21,
+    forLesson: true,
+    german: '',
+    germanWithoutMisspeling: '',
+    french: ''
+  },
+  {
+    id: 22,
+    forLesson: true,
+    german: '',
+    germanWithoutMisspeling: '',
+    french: ''
+  },
+  {
+    id: 23,
+    forLesson: true,
+    german: '',
+    germanWithoutMisspeling: '',
+    french: ''
+  },
 ]);
 
 export default germanWords;

@@ -28,11 +28,9 @@
 			if (language == "german") {
 				languageCourse = "germanCourse";
 				course = true;
-				notEnoughSelectedWords = false;
 			} else {
 				languageCourse = "englishCourse";
 				course = true;
-				notEnoughSelectedWords = false;
 			};
 		}
 	};
@@ -53,6 +51,9 @@
 		background = "#f8f8f8"
 	}
 
+	const returnToLobby = () => {
+		course = false
+	}
 
 	const changeCurrentBackgroundColorMode = async () => {
 		if (darkMode == true) {
@@ -127,7 +128,7 @@
 		{:else if menu == true && course == false}
 			<Menu on:closeMenu={() => closeMenu()} on:openChangeBackgroundColor={() => openChangeBackgroundColor()} />
 		{:else if languageCourse === "germanCourse"}
-			<GermanCourse	/>
+			<GermanCourse on:returnToLobby={() => returnToLobby()}	/>
 		{:else if languageCourse === "englishCourse"}
 			<EnglishCourse />
 		{/if}
@@ -222,7 +223,7 @@
 	}
 
 
-	@media screen and (max-width: 270px) {
+	@media screen and (max-width: 1200px) and (max-height: 2550px) {
 		h1 {
 			font-size: 1.2rem;
 		}

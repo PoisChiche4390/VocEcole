@@ -206,7 +206,7 @@
 
 
 
-  @media screen and (max-width: 270px) {
+  @media screen and (max-width: 1200px) and (max-height: 2550px) {
     .blue {
       display: inline-flex;
       align-items: center;

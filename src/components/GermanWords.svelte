@@ -5,8 +5,9 @@
 
   let actualPage = 0;
   let pageSize = 10;
-  $: width = innerWidth;
-  $: if (width < 270) {
+  let width = screen.width;
+  let height = screen.height;
+  $: if (width < 1200 && height < 2550) {
     pageSize = 5
   } else {
     pageSize = 10
@@ -121,6 +122,9 @@
     max-width: 600px;
     margin: 10px auto;
   }
+  label {
+    cursor: pointer;
+  }
   .info {
     background: #a9d9ea;
     padding: 4px 0;
@@ -144,7 +148,7 @@
     border-radius: 6px;
     background: #eeeeee;
   }
-  @media screen and (max-width: 270px) {
+  @media screen and (max-width: 1200px) and (max-height: 2550px) {
     .german-words-list {
       font-size: 0.8rem;
       transform: translateY(-5%);

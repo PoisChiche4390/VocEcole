@@ -5,6 +5,9 @@
   import { onDestroy } from 'svelte';
   import Button from '../shared/Button.svelte'
   import selectedGermanWords from '../stores/selectedGermanWords';
+  import { createEventDispatcher } from 'svelte'
+
+  const dispatch = createEventDispatcher()
 
   let score = 0;
   let scorePercentage = 0;
@@ -18,8 +21,9 @@
   let margin1 = 80;
   let margin2 = 75;
   let margin3 = 100;
-  $: width = window.innerWidth;
-  $: if (width < 270) {
+  let width = screen.width;
+  let height = screen.height;
+  $: if (width < 1200 && height < 2550) {
     margin1 = 50
     margin2 = 50
     margin3 = 50
@@ -81,7 +85,7 @@
       readOnly = false;
       wrongAnswer = false;
       updateCurrentWord()
-    } else if (translatedCurrentWordWithoutMisspeling == currentWord.germanWithoutMisspeling) {
+    } else if (translatedCurrentWordWithoutMisspeling == currentWord.german.toLowerCase().split(" ").join("")) {
       selectedGermanWords.update(selectedWords => {
         // Remove the word from the array
         return selectedWords.filter(word => word.id !== currentWord.id);
@@ -96,6 +100,8 @@
         lessonEnd = true
         console.log("letsgo")
       }
+    } else if (lessonEnd == true) {
+      dispatch('returnToLobby')
     } else {
       background = "#ffb2b2";
       notEnoughCharacters = false;
@@ -109,11 +115,7 @@
   const wordHelpClick = () => {
     wordHelp = !wordHelp;
   };
-
-  const finishLesson = () => {
-    location.reload()
-  };
-
+  
   onDestroy(() => {
   });
 </script>
@@ -143,8 +145,6 @@
     {#if translatedCurrentWord.length > 174}
       <p class="max-characters">Calme, stresse pas</p>
       <div class="colored-bottom" style="background: {background}; margin-top: {margin2}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
-    {:else if lessonEnd == true}
-    <div class="colored-bottom" style="background: {background}; margin-top: {margin3}px"><Button color={color} margin="{margin1}px 0" on:click={finishLesson}>Confirmer</Button></div>
     {:else if notEnoughCharacters == true}
       <p class="not-enough-characters">Il doit y avoir plus d'un charactère</p>
       <div class="colored-bottom" style="background: {background}; margin-top: {margin1 - 25}px"><Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>Confirmer</Button></div>
@@ -260,7 +260,7 @@
   }
 
 
-  @media screen and (max-width: 270px) {
+  @media screen and (max-width: 1200px) and (max-height: 2550px) {
     * {
       font-size: 1rem;
     }
