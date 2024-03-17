@@ -268,7 +268,7 @@
 
   @media screen and (max-width: 1200px) and (max-height: 2550px) {
     * {
-      font-size: 17px;
+      font-size: 1rem;
     }
     .course {
       width: 100vw;
@@ -301,7 +301,7 @@
     textarea {
       width: 92vw;
       height: 20vh;
-      font-size: 0.9rem;
+      font-size: 17px;
       padding: 3px 3vwpx;
     }
     .colored-bottom {
