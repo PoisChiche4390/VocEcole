@@ -259,7 +259,7 @@
     font-size: 0.9rem;
   }
   .colored-bottom {
-    height: 500px;
+    height: 28vh;
     width: 100%;
   }
   .wrong-answer {
@@ -310,7 +310,6 @@
     }
     .wrong-answer {
       font-size: 0.9rem;
-      transform: translateY(-450%);
     }
   }
 </style>
