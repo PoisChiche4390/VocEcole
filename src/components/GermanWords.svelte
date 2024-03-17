@@ -154,7 +154,7 @@
       transform: translateY(-5%);
     }
     .arrows {
-      margin-top: 15px;
+      margin-top: 10vh;
       height: 25px;
     }
     img {

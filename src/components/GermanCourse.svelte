@@ -18,7 +18,7 @@
   let readOnly = false;
   let wrongAnswer = false;
   let continueBtn = false;
-  let styleForHelp = "display: inline; height: 70px; vertical-align: middle; margin: 21.7px 0;";
+  let styleForHelp = "display: inline; margin: 21.7px 5vw;";
   let showWords = "";
   const totalWords = $selectedGermanWords.length;
   $: notEnoughCharacters = false;
@@ -119,11 +119,11 @@
     if (wordHelp == false) {
       wordHelp = !wordHelp;
       showWords = currentWord.german;
-      styleForHelp = "display: inline; height: 70px; vertical-align: middle; border: 2px solid #d2d2d2; border-radius: 20px; background: #fff; margin: 20px 0;"
+      styleForHelp = "display: inline; border: 2px solid #d2d2d2; border-radius: 20px; background: #fff; margin-top: 20px; margin-bottom: 20px;"
     } else {
       wordHelp = !wordHelp;
       showWords = "";
-      styleForHelp = "display: inline; height: 70px; vertical-align: middle; margin: 21.7px 0;"
+      styleForHelp = "display: inline; margin-top: 21.7px; margin-bottom: 21.7px;"
 
     }
   };
@@ -204,6 +204,13 @@
     margin-top: 3vh;
     justify-content: left;
   }
+  .help {
+    display: inline;
+    height: 70px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .words {
     width: 420px;
     height: 50px;
@@ -277,15 +284,19 @@
       font-size: 1.2rem;
     }
     .words-container {
+      height: 15vh;
       margin-bottom: 15vh;
     }
     .words {
       width: 90vw;
       margin-left: 5vw;
       margin-right: 5vw;
-      transform: translateY(115%);
+      transform: translateY(-50%);
     }
     .help {
+      width: 90vw;
+      margin-left: calc(5vw - 1.7px);
+      margin-right: calc(5vw - 1.7px);
       height: 10vh;
     }
     textarea {
@@ -296,12 +307,6 @@
     }
     .colored-bottom {
       margin-top: 5px;
-    }
-    .help {
-      width: 90vw;
-      margin-left: 5vw;
-      margin-right: 5vw;
-      height: 10vh;
     }
     .wrong-answer {
       font-size: 0.9rem;

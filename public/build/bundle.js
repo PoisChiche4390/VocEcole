@@ -1219,7 +1219,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "info svelte-z4el46");
+    			attr_dev(p, "class", "info svelte-19xlwax");
     			add_location(p, file$7, 90, 10, 2791);
     		},
     		m: function mount(target, anchor) {
@@ -1278,7 +1278,7 @@ var app = (function () {
     			t4 = space();
     			attr_dev(input, "type", "checkbox");
     			add_location(input, file$7, 84, 10, 2544);
-    			attr_dev(label, "class", "checkbox-container svelte-z4el46");
+    			attr_dev(label, "class", "checkbox-container svelte-19xlwax");
     			add_location(label, file$7, 83, 8, 2498);
     		},
     		m: function mount(target, anchor) {
@@ -1453,22 +1453,22 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*actualWordsPage*/ ctx[1].every(func);
     			add_location(input, file$7, 76, 8, 2186);
-    			attr_dev(label, "class", "select-all svelte-z4el46");
+    			attr_dev(label, "class", "select-all svelte-19xlwax");
     			add_location(label, file$7, 75, 6, 2150);
     			add_location(form, file$7, 74, 4, 2136);
-    			attr_dev(div0, "class", "wordsContainer svelte-z4el46");
+    			attr_dev(div0, "class", "wordsContainer svelte-19xlwax");
     			add_location(div0, file$7, 73, 2, 2102);
     			if (!src_url_equal(img0.src, img0_src_value = "/img/leftArrow.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-z4el46");
+    			attr_dev(img0, "class", "svelte-19xlwax");
     			add_location(img0, file$7, 96, 4, 2914);
-    			attr_dev(span, "class", "actual-page svelte-z4el46");
+    			attr_dev(span, "class", "actual-page svelte-19xlwax");
     			add_location(span, file$7, 97, 4, 2999);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/rightArrow.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-z4el46");
+    			attr_dev(img1, "class", "svelte-19xlwax");
     			add_location(img1, file$7, 98, 4, 3059);
-    			attr_dev(div1, "class", "arrows svelte-z4el46");
+    			attr_dev(div1, "class", "arrows svelte-19xlwax");
     			add_location(div1, file$7, 95, 2, 2888);
-    			attr_dev(div2, "class", "german-words-list svelte-z4el46");
+    			attr_dev(div2, "class", "german-words-list svelte-19xlwax");
     			add_location(div2, file$7, 72, 0, 2067);
     		},
     		l: function claim(nodes) {
@@ -1897,7 +1897,7 @@ var app = (function () {
     			button = element("button");
     			if (default_slot) default_slot.c();
     			set_style(button, "margin", /*margin*/ ctx[0]);
-    			attr_dev(button, "class", "svelte-kp1x0s");
+    			attr_dev(button, "class", "svelte-1cdm5su");
     			toggle_class(button, "blue", /*color*/ ctx[1] === 'duolingo-button-blue');
     			toggle_class(button, "green", /*color*/ ctx[1] === 'duolingo-button-green');
     			toggle_class(button, "red", /*color*/ ctx[1] === 'duolingo-button-red');
@@ -2063,8 +2063,8 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-g8lj27");
-    			add_location(textarea, file$5, 152, 4, 4737);
+    			attr_dev(textarea, "class", "svelte-b925ys");
+    			add_location(textarea, file$5, 152, 4, 4673);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2116,8 +2116,8 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-g8lj27");
-    			add_location(textarea, file$5, 150, 4, 4556);
+    			attr_dev(textarea, "class", "svelte-b925ys");
+    			add_location(textarea, file$5, 150, 4, 4492);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2177,10 +2177,10 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(div, "class", "colored-bottom svelte-g8lj27");
+    			attr_dev(div, "class", "colored-bottom svelte-b925ys");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 167, 6, 5863);
+    			add_location(div, file$5, 167, 6, 5799);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2263,12 +2263,12 @@ var app = (function () {
     			p = element("p");
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
-    			attr_dev(p, "class", "wrong-answer svelte-g8lj27");
-    			add_location(p, file$5, 164, 6, 5758);
-    			attr_dev(div, "class", "colored-bottom svelte-g8lj27");
+    			attr_dev(p, "class", "wrong-answer svelte-b925ys");
+    			add_location(p, file$5, 164, 6, 5694);
+    			attr_dev(div, "class", "colored-bottom svelte-b925ys");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 162, 4, 5563);
+    			add_location(div, file$5, 162, 4, 5499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2352,12 +2352,12 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "not-enough-characters svelte-g8lj27");
-    			add_location(p, file$5, 159, 6, 5250);
-    			attr_dev(div, "class", "colored-bottom svelte-g8lj27");
+    			attr_dev(p, "class", "not-enough-characters svelte-b925ys");
+    			add_location(p, file$5, 159, 6, 5186);
+    			attr_dev(div, "class", "colored-bottom svelte-b925ys");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin1*/ ctx[6] - 25 + "px");
-    			add_location(div, file$5, 160, 6, 5331);
+    			add_location(div, file$5, 160, 6, 5267);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2440,12 +2440,12 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "max-characters svelte-g8lj27");
-    			add_location(p, file$5, 156, 6, 4957);
-    			attr_dev(div, "class", "colored-bottom svelte-g8lj27");
+    			attr_dev(p, "class", "max-characters svelte-b925ys");
+    			add_location(p, file$5, 156, 6, 4893);
+    			attr_dev(div, "class", "colored-bottom svelte-b925ys");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 157, 6, 5013);
+    			add_location(div, file$5, 157, 6, 4949);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2678,28 +2678,28 @@ var app = (function () {
     			if_block0.c();
     			t7 = space();
     			if_block1.c();
-    			attr_dev(div0, "class", "pourcentage-contrast svelte-g8lj27");
-    			add_location(div0, file$5, 137, 6, 4080);
-    			attr_dev(div1, "class", "pourcentage svelte-g8lj27");
+    			attr_dev(div0, "class", "pourcentage-contrast svelte-b925ys");
+    			add_location(div0, file$5, 137, 6, 4016);
+    			attr_dev(div1, "class", "pourcentage svelte-b925ys");
     			set_style(div1, "width", /*$tweenedScore*/ ctx[12] + "%");
-    			add_location(div1, file$5, 136, 4, 4014);
-    			attr_dev(div2, "class", "course-pourcentage svelte-g8lj27");
-    			add_location(div2, file$5, 135, 2, 3976);
-    			attr_dev(h2, "class", "svelte-g8lj27");
-    			add_location(h2, file$5, 141, 4, 4178);
-    			attr_dev(p0, "class", "help svelte-g8lj27");
+    			add_location(div1, file$5, 136, 4, 3950);
+    			attr_dev(div2, "class", "course-pourcentage svelte-b925ys");
+    			add_location(div2, file$5, 135, 2, 3912);
+    			attr_dev(h2, "class", "svelte-b925ys");
+    			add_location(h2, file$5, 141, 4, 4114);
+    			attr_dev(p0, "class", "help svelte-b925ys");
     			attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
-    			add_location(p0, file$5, 143, 6, 4239);
-    			attr_dev(p1, "class", "words svelte-g8lj27");
-    			add_location(p1, file$5, 145, 6, 4389);
-    			attr_dev(div3, "class", "words-container svelte-g8lj27");
-    			add_location(div3, file$5, 142, 4, 4202);
-    			attr_dev(div4, "class", "orinal-words svelte-g8lj27");
-    			add_location(div4, file$5, 140, 2, 4146);
-    			attr_dev(div5, "class", "translate-to-french svelte-g8lj27");
-    			add_location(div5, file$5, 148, 2, 4489);
-    			attr_dev(div6, "class", "course svelte-g8lj27");
-    			add_location(div6, file$5, 134, 0, 3952);
+    			add_location(p0, file$5, 143, 6, 4175);
+    			attr_dev(p1, "class", "words svelte-b925ys");
+    			add_location(p1, file$5, 145, 6, 4325);
+    			attr_dev(div3, "class", "words-container svelte-b925ys");
+    			add_location(div3, file$5, 142, 4, 4138);
+    			attr_dev(div4, "class", "orinal-words svelte-b925ys");
+    			add_location(div4, file$5, 140, 2, 4082);
+    			attr_dev(div5, "class", "translate-to-french svelte-b925ys");
+    			add_location(div5, file$5, 148, 2, 4425);
+    			attr_dev(div6, "class", "course svelte-b925ys");
+    			add_location(div6, file$5, 134, 0, 3888);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2851,7 +2851,7 @@ var app = (function () {
     	let readOnly = false;
     	let wrongAnswer = false;
     	let continueBtn = false;
-    	let styleForHelp = "display: inline; height: 70px; vertical-align: middle; margin: 21.7px 0;";
+    	let styleForHelp = "display: inline; margin: 21.7px 5vw;";
     	let showWords = "";
     	const totalWords = $selectedGermanWords.length;
     	let margin1 = 80;
@@ -2936,11 +2936,11 @@ var app = (function () {
     		if (wordHelp == false) {
     			wordHelp = !wordHelp;
     			$$invalidate(5, showWords = currentWord.german);
-    			$$invalidate(4, styleForHelp = "display: inline; height: 70px; vertical-align: middle; border: 2px solid #d2d2d2; border-radius: 20px; background: #fff; margin: 20px 0;");
+    			$$invalidate(4, styleForHelp = "display: inline; border: 2px solid #d2d2d2; border-radius: 20px; background: #fff; margin-top: 20px; margin-bottom: 20px;");
     		} else {
     			wordHelp = !wordHelp;
     			$$invalidate(5, showWords = "");
-    			$$invalidate(4, styleForHelp = "display: inline; height: 70px; vertical-align: middle; margin: 21.7px 0;");
+    			$$invalidate(4, styleForHelp = "display: inline; margin-top: 21.7px; margin-bottom: 21.7px;");
     		}
     	};
 
