@@ -2063,7 +2063,7 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-mzg8s6");
+    			attr_dev(textarea, "class", "svelte-1axhhjn");
     			add_location(textarea, file$5, 149, 4, 4550);
     		},
     		m: function mount(target, anchor) {
@@ -2116,7 +2116,7 @@ var app = (function () {
     			attr_dev(textarea, "cols", "5");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
-    			attr_dev(textarea, "class", "svelte-mzg8s6");
+    			attr_dev(textarea, "class", "svelte-1axhhjn");
     			add_location(textarea, file$5, 147, 4, 4369);
     		},
     		m: function mount(target, anchor) {
@@ -2177,7 +2177,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(div, "class", "colored-bottom svelte-mzg8s6");
+    			attr_dev(div, "class", "colored-bottom svelte-1axhhjn");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
     			add_location(div, file$5, 164, 6, 5673);
@@ -2263,9 +2263,9 @@ var app = (function () {
     			p = element("p");
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
-    			attr_dev(p, "class", "wrong-answer svelte-mzg8s6");
+    			attr_dev(p, "class", "wrong-answer svelte-1axhhjn");
     			add_location(p, file$5, 161, 8, 5566);
-    			attr_dev(div, "class", "colored-bottom svelte-mzg8s6");
+    			attr_dev(div, "class", "colored-bottom svelte-1axhhjn");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
     			add_location(div, file$5, 159, 6, 5369);
@@ -2352,9 +2352,9 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "not-enough-characters svelte-mzg8s6");
+    			attr_dev(p, "class", "not-enough-characters svelte-1axhhjn");
     			add_location(p, file$5, 156, 6, 5061);
-    			attr_dev(div, "class", "colored-bottom svelte-mzg8s6");
+    			attr_dev(div, "class", "colored-bottom svelte-1axhhjn");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
     			add_location(div, file$5, 157, 6, 5142);
@@ -2440,9 +2440,9 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			attr_dev(p, "class", "max-characters svelte-mzg8s6");
+    			attr_dev(p, "class", "max-characters svelte-1axhhjn");
     			add_location(p, file$5, 153, 6, 4770);
-    			attr_dev(div, "class", "colored-bottom svelte-mzg8s6");
+    			attr_dev(div, "class", "colored-bottom svelte-1axhhjn");
     			set_style(div, "background", /*background*/ ctx[9]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
     			add_location(div, file$5, 154, 6, 4826);
@@ -2678,27 +2678,27 @@ var app = (function () {
     			if_block0.c();
     			t7 = space();
     			if_block1.c();
-    			attr_dev(div0, "class", "pourcentage-contrast svelte-mzg8s6");
+    			attr_dev(div0, "class", "pourcentage-contrast svelte-1axhhjn");
     			add_location(div0, file$5, 134, 6, 3893);
-    			attr_dev(div1, "class", "pourcentage svelte-mzg8s6");
+    			attr_dev(div1, "class", "pourcentage svelte-1axhhjn");
     			set_style(div1, "width", /*$tweenedScore*/ ctx[12] + "%");
     			add_location(div1, file$5, 133, 4, 3827);
-    			attr_dev(div2, "class", "course-pourcentage svelte-mzg8s6");
+    			attr_dev(div2, "class", "course-pourcentage svelte-1axhhjn");
     			add_location(div2, file$5, 132, 2, 3789);
-    			attr_dev(h2, "class", "svelte-mzg8s6");
+    			attr_dev(h2, "class", "svelte-1axhhjn");
     			add_location(h2, file$5, 138, 4, 3991);
-    			attr_dev(p0, "class", "help svelte-mzg8s6");
+    			attr_dev(p0, "class", "help svelte-1axhhjn");
     			attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
     			add_location(p0, file$5, 140, 6, 4052);
-    			attr_dev(p1, "class", "words svelte-mzg8s6");
+    			attr_dev(p1, "class", "words svelte-1axhhjn");
     			add_location(p1, file$5, 142, 6, 4202);
-    			attr_dev(div3, "class", "words-container svelte-mzg8s6");
+    			attr_dev(div3, "class", "words-container svelte-1axhhjn");
     			add_location(div3, file$5, 139, 4, 4015);
-    			attr_dev(div4, "class", "orinal-words svelte-mzg8s6");
+    			attr_dev(div4, "class", "orinal-words svelte-1axhhjn");
     			add_location(div4, file$5, 137, 2, 3959);
-    			attr_dev(div5, "class", "translate-to-french svelte-mzg8s6");
+    			attr_dev(div5, "class", "translate-to-french svelte-1axhhjn");
     			add_location(div5, file$5, 145, 2, 4302);
-    			attr_dev(div6, "class", "course svelte-mzg8s6");
+    			attr_dev(div6, "class", "course svelte-1axhhjn");
     			add_location(div6, file$5, 131, 0, 3765);
     		},
     		l: function claim(nodes) {

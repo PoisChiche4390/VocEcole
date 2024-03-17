@@ -268,7 +268,7 @@
 
   @media screen and (max-width: 1200px) and (max-height: 2550px) {
     * {
-      font-size: 1rem;
+      font-size: 17px;
     }
     .course {
       width: 100vw;
