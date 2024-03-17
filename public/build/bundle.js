@@ -1219,7 +1219,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "info svelte-19xlwax");
+    			attr_dev(p, "class", "info svelte-17ivda2");
     			add_location(p, file$7, 90, 10, 2791);
     		},
     		m: function mount(target, anchor) {
@@ -1278,7 +1278,7 @@ var app = (function () {
     			t4 = space();
     			attr_dev(input, "type", "checkbox");
     			add_location(input, file$7, 84, 10, 2544);
-    			attr_dev(label, "class", "checkbox-container svelte-19xlwax");
+    			attr_dev(label, "class", "checkbox-container svelte-17ivda2");
     			add_location(label, file$7, 83, 8, 2498);
     		},
     		m: function mount(target, anchor) {
@@ -1453,22 +1453,22 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*actualWordsPage*/ ctx[1].every(func);
     			add_location(input, file$7, 76, 8, 2186);
-    			attr_dev(label, "class", "select-all svelte-19xlwax");
+    			attr_dev(label, "class", "select-all svelte-17ivda2");
     			add_location(label, file$7, 75, 6, 2150);
     			add_location(form, file$7, 74, 4, 2136);
-    			attr_dev(div0, "class", "wordsContainer svelte-19xlwax");
+    			attr_dev(div0, "class", "wordsContainer svelte-17ivda2");
     			add_location(div0, file$7, 73, 2, 2102);
     			if (!src_url_equal(img0.src, img0_src_value = "/img/leftArrow.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-19xlwax");
+    			attr_dev(img0, "class", "svelte-17ivda2");
     			add_location(img0, file$7, 96, 4, 2914);
-    			attr_dev(span, "class", "actual-page svelte-19xlwax");
+    			attr_dev(span, "class", "actual-page svelte-17ivda2");
     			add_location(span, file$7, 97, 4, 2999);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/rightArrow.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-19xlwax");
+    			attr_dev(img1, "class", "svelte-17ivda2");
     			add_location(img1, file$7, 98, 4, 3059);
-    			attr_dev(div1, "class", "arrows svelte-19xlwax");
+    			attr_dev(div1, "class", "arrows svelte-17ivda2");
     			add_location(div1, file$7, 95, 2, 2888);
-    			attr_dev(div2, "class", "german-words-list svelte-19xlwax");
+    			attr_dev(div2, "class", "german-words-list svelte-17ivda2");
     			add_location(div2, file$7, 72, 0, 2067);
     		},
     		l: function claim(nodes) {
@@ -1897,7 +1897,7 @@ var app = (function () {
     			button = element("button");
     			if (default_slot) default_slot.c();
     			set_style(button, "margin", /*margin*/ ctx[0]);
-    			attr_dev(button, "class", "svelte-1cdm5su");
+    			attr_dev(button, "class", "svelte-zynsvf");
     			toggle_class(button, "blue", /*color*/ ctx[1] === 'duolingo-button-blue');
     			toggle_class(button, "green", /*color*/ ctx[1] === 'duolingo-button-green');
     			toggle_class(button, "red", /*color*/ ctx[1] === 'duolingo-button-red');
@@ -3939,18 +3939,18 @@ var app = (function () {
     			t10 = space();
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
-    			attr_dev(h1, "class", "svelte-utwoyx");
+    			attr_dev(h1, "class", "svelte-1vt1fw8");
     			add_location(h1, file, 89, 4, 2190);
-    			attr_dev(div0, "class", "top-page svelte-utwoyx");
+    			attr_dev(div0, "class", "top-page svelte-1vt1fw8");
     			add_location(div0, file, 88, 3, 2163);
-    			attr_dev(button0, "class", "svelte-utwoyx");
+    			attr_dev(button0, "class", "svelte-1vt1fw8");
     			add_location(button0, file, 93, 5, 2264);
     			if (!src_url_equal(img.src, img_src_value = "/img/parameter.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			add_location(img, file, 94, 5, 2317);
-    			attr_dev(label, "class", "svelte-utwoyx");
+    			attr_dev(label, "class", "svelte-1vt1fw8");
     			add_location(label, file, 92, 4, 2251);
-    			attr_dev(div1, "class", "parameters svelte-utwoyx");
+    			attr_dev(div1, "class", "parameters svelte-1vt1fw8");
     			add_location(div1, file, 91, 3, 2222);
     			add_location(h3, file, 98, 4, 2415);
     			option0.__value = "german";
@@ -3961,7 +3961,7 @@ var app = (function () {
     			add_location(option1, file, 101, 5, 2517);
     			if (/*language*/ ctx[1] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[19].call(select));
     			add_location(select, file, 99, 4, 2435);
-    			attr_dev(div2, "class", "select-language svelte-utwoyx");
+    			attr_dev(div2, "class", "select-language svelte-1vt1fw8");
     			add_location(div2, file, 97, 3, 2381);
     			attr_dev(div3, "class", "wordsChoice");
     			add_location(div3, file, 104, 3, 2585);
@@ -4139,13 +4139,13 @@ var app = (function () {
     			script2 = element("script");
     			t3 = space();
     			script3 = element("script");
-    			attr_dev(button, "class", "svelte-utwoyx");
+    			attr_dev(button, "class", "svelte-1vt1fw8");
     			add_location(button, file, 119, 6, 3133);
     			set_custom_element_data(ion_icon, "name", "close-outline");
-    			set_custom_element_data(ion_icon, "class", "close-page-image svelte-utwoyx");
+    			set_custom_element_data(ion_icon, "class", "close-page-image svelte-1vt1fw8");
     			set_style(ion_icon, "color", /*colorCloseBackgroundColorPage*/ ctx[5]);
     			add_location(ion_icon, file, 120, 6, 3204);
-    			attr_dev(label, "class", "svelte-utwoyx");
+    			attr_dev(label, "class", "svelte-1vt1fw8");
     			add_location(label, file, 118, 5, 3119);
     			attr_dev(script0, "type", "module");
     			if (!src_url_equal(script0.src, script0_src_value = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")) attr_dev(script0, "src", script0_src_value);
@@ -4159,7 +4159,7 @@ var app = (function () {
     			script3.noModule = true;
     			if (!src_url_equal(script3.src, script3_src_value = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")) attr_dev(script3, "src", script3_src_value);
     			add_location(script3, file, 124, 6, 3644);
-    			attr_dev(div, "class", "close-page svelte-utwoyx");
+    			attr_dev(div, "class", "close-page svelte-1vt1fw8");
     			add_location(div, file, 117, 4, 3089);
     		},
     		m: function mount(target, anchor) {
@@ -4317,7 +4317,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "selectionez au moins 1 mot";
-    			attr_dev(p, "class", "not-enough-selected-words svelte-utwoyx");
+    			attr_dev(p, "class", "not-enough-selected-words svelte-1vt1fw8");
     			add_location(p, file, 113, 4, 2865);
     		},
     		m: function mount(target, anchor) {
@@ -4376,10 +4376,10 @@ var app = (function () {
     			main = element("main");
     			div = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "sub-main svelte-utwoyx");
+    			attr_dev(div, "class", "sub-main svelte-1vt1fw8");
     			add_location(div, file, 86, 1, 2066);
     			set_style(main, "background", /*background*/ ctx[6]);
-    			attr_dev(main, "class", "svelte-utwoyx");
+    			attr_dev(main, "class", "svelte-1vt1fw8");
     			add_location(main, file, 85, 0, 2024);
     		},
     		l: function claim(nodes) {

@@ -235,7 +235,7 @@
 			font-size: 0.9rem;
 		}
 		.not-enough-selected-words {
-			transform: translateY(-900%);
+			transform: translateY(-550%);
 		}
 	}
 </style>

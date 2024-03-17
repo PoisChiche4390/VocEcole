@@ -214,7 +214,6 @@
       font-size: 0.9rem;
       width: 200px;
       height: 20px;
-      transform: translateY(-80%);
     }
     .green {
       display: inline-flex;
