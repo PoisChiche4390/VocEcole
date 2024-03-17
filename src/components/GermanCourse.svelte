@@ -9,6 +9,8 @@
 
   const dispatch = createEventDispatcher()
 
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+
   let score = 0;
   let scorePercentage = 0;
   let color = 'duolingo-button-green'
@@ -16,6 +18,8 @@
   let readOnly = false;
   let wrongAnswer = false;
   let continueBtn = false;
+  let styleForHelp = "display: inline; height: 70px; vertical-align: middle; margin: 21.7px 0;";
+  let showWords = "";
   const totalWords = $selectedGermanWords.length;
   $: notEnoughCharacters = false;
   $: wordHelp = false;
@@ -85,16 +89,7 @@
         wrongAnswer = false;
         updateCurrentWord()
       } else if (lessonEnd == true) {
-        score = 0;
-        scorePercentage = 0;
-        color = 'duolingo-button-green'
-        lessonEnd = false;
-        readOnly = false;
-        wrongAnswer = false;
-        notEnoughCharacters = false;
-        continueBtn = false;
-        wordHelp = false;
-        dispatch('returnToLobby')
+        location.reload()
       }
     } else if (translatedCurrentWordWithoutMisspeling == currentWord.german.toLowerCase().split(" ").join("")) {
       selectedGermanWords.update(selectedWords => {
@@ -120,8 +115,17 @@
     }
   };
 
-  const wordHelpClick = () => {
-    wordHelp = !wordHelp;
+  const wordHelpClick = async () => {
+    if (wordHelp == false) {
+      wordHelp = !wordHelp;
+      showWords = currentWord.german;
+      styleForHelp = "display: inline; height: 70px; vertical-align: middle; border: 2px solid #d2d2d2; border-radius: 20px; background: #fff; margin: 20px 0;"
+    } else {
+      wordHelp = !wordHelp;
+      showWords = "";
+      styleForHelp = "display: inline; height: 70px; vertical-align: middle; margin: 21.7px 0;"
+
+    }
   };
   
   onDestroy(() => {
@@ -137,9 +141,8 @@
   <div class="orinal-words">
     <h2>Traduis :</h2>
     <div class="words-container">
-      {#if wordHelp == true}
-        <p class="help" in:fade out:scale|local>{currentWord.german}</p>
-      {/if}
+      <p class="help" in:fade out:scale|local style="{styleForHelp}">{showWords}</p>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <p class="words" on:click={() => wordHelpClick()}>{currentWord.french}</p>
     </div>
   </div>
@@ -201,20 +204,11 @@
     margin-top: 3vh;
     justify-content: left;
   }
-  .help {
-    display: inline;
-    height: 70px;
-    vertical-align: middle;
-    border: 2px solid #d2d2d2;
-    border-radius: 20px;
-    background: #fff;
-  }
   .words {
     width: 420px;
     height: 50px;
     overflow-wrap: break-word;
-    transform: translateY(200%);
-    position: fixed;
+    margin: 20px 0;
   }
   .words-container .words {
     text-decoration: underline dotted;
