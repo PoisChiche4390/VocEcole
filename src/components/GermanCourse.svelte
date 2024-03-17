@@ -279,8 +279,10 @@
     h2 {
       margin-left: 4vw;
       font-size: 1.2rem;
+      width: 96vw;
     }
     .words-container {
+      width: 100vw;
       height: 15vh;
       margin-bottom: 15vh;
     }
