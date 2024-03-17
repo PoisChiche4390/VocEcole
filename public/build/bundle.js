@@ -1037,42 +1037,43 @@ var app = (function () {
     const germanWords = writable([
       {
         id: 1,
-        forLessen: false,
-        content: "Kapitel 3"
+        forLesson: false,
+        content: "Kapitel 3",
+        color: "blue"
       },
       {
         id: 2,
         forLesson: true,
         german: 'überall',
-        germanWithoutMisspeling: 'überall',
+        germanWithoutMisspeling: 'uberall',
         french: 'partout'
       },
       {
         id: 3,
         forLesson: true,
         german: 'die Öffnungszeiten',
-        germanWithoutMisspeling: 'dieöffnungszeiten',
+        germanWithoutMisspeling: 'dieoffnungszeiten',
         french: "les heures d'ouverture"
       },
       {
         id: 4,
         forLesson: true,
         german: 'die Fussgängerzone, die Fussgängerzonen',
-        germanWithoutMisspeling: 'diefussgängerzone,diefussgängerzonen',
+        germanWithoutMisspeling: 'diefussgangerzonediefussgangerzonen',
         french: 'la zone piétonne, les zones piétonnes'
       },
       {
         id: 5,
         forLesson: true,
         german: 'der Laden, die Laden',
-        germanWithoutMisspeling: 'derladen,dieladen',
+        germanWithoutMisspeling: 'derladendieladen',
         french: 'le magasin, les magasins'
       },
       {
         id: 6,
         forLesson: true,
         german: 'Ich kaufe lieber in kleinen Läden ein.',
-        germanWithoutMisspeling: 'ichkaufelieberinkleinenlädenein.',
+        germanWithoutMisspeling: 'ichkaufelieberinkleinenladenein',
         french: 'Je préfère acheter dans des petits commerces.'
       },
       {
@@ -1086,21 +1087,21 @@ var app = (function () {
         id: 8,
         forLesson: true,
         german: 'Die Beratung im Geschäft war sehr gut.',
-        germanWithoutMisspeling: 'dieberatungimgeschäftwarsehrgut.',
+        germanWithoutMisspeling: 'dieberatungimgeschaftwarsehrgut',
         french: 'Le conseil dans le magasin était très bien.'
       },
       {
         id: 9,
         forLesson: true,
         german: 'teilen, teilt, hat geteilt',
-        germanWithoutMisspeling: 'teilen,teilt,hatgeteilt',
+        germanWithoutMisspeling: 'teilenteilthatgeteilt',
         french: 'partager (3 formes)'
       },
       {
         id: 10,
         forLesson: true,
         german: 'brauchen, braucht, hat gebraucht',
-        germanWithoutMisspeling: 'brauchen,braucht,hatgebraucht',
+        germanWithoutMisspeling: 'brauchenbrauchthatgebraucht',
         french: 'avoir besoin de (3 formes)'
       },
       {
@@ -1121,14 +1122,14 @@ var app = (function () {
         id: 13,
         forLesson: true,
         german: 'verzichten auf, verzichtet, hat verzichtet',
-        germanWithoutMisspeling: 'verzichtenauf,verzichtet,hatverzichtet',
+        germanWithoutMisspeling: 'verzichtenaufverzichtethatverzichtet',
         french: 'renoncer à (3 formes)'
       },
       {
         id: 14,
         forLesson: true,
         german: 'Ich möchte nicht auf meine Musik verzichten.',
-        germanWithoutMisspeling: 'ichmöchtenichtaufmeinemusikverzichten.',
+        germanWithoutMisspeling: 'ichmochtenichtaufmeinemusikverzichten',
         french: 'Je ne voudrais pas renoncer à ma musique.'
       },
       {
@@ -1142,57 +1143,286 @@ var app = (function () {
         id: 16,
         forLesson: true,
         german: 'Er besitzt ein Haus.',
-        germanWithoutMisspeling: 'erbesitzteinhaus.',
+        germanWithoutMisspeling: 'erbesitzteinhaus',
         french: 'Il possède une maison.'
       },
       {
         id: 17,
         forLesson: true,
         german: 'Ich habe nicht viel/genug Platz.',
-        germanWithoutMisspeling: 'ichhabenichtviel/genugplatz.',
+        germanWithoutMisspeling: 'ichhabenichtvielgenugplatz',
         french: "Je n'ai pas beaucoup/assez de place."
       },
       {
         id: 18,
         forLesson: true,
         german: 'Ich habe (sehr) wenig Platz.',
-        germanWithoutMisspeling: 'ichhabe(sehr)wenigplatz.',
+        germanWithoutMisspeling: 'ichhabe(sehr)wenigplatz',
         french: "J'ai (très) peu de place."
       },
       {
         id: 19,
         forLesson: true,
         german: 'verdienen, verdient, hat verdient',
-        germanWithoutMisspeling: 'verdienen,verdient,hatverdient',
+        germanWithoutMisspeling: 'verdienenverdienthatverdient',
         french: "gagner de l'argent (3 formes)"
       },
       {
         id: 20,
         forLesson: true,
-        german: '',
-        germanWithoutMisspeling: '',
-        french: ''
+        german: 'Ich würde gern viel Geld verdienen !',
+        germanWithoutMisspeling: 'ichwurdegernvielgeldverdienen',
+        french: "J'aimerais bien gagner beaucoup d'argent !"
       },
       {
         id: 21,
         forLesson: true,
-        german: '',
-        germanWithoutMisspeling: '',
-        french: ''
+        german: 'verschenken, verschenkt, hat verschenkt',
+        germanWithoutMisspeling: 'verschenkenverschenkthatverschenkt',
+        french: 'donner, faire cadeau de (3 formes)'
       },
       {
         id: 22,
         forLesson: true,
-        german: '',
-        germanWithoutMisspeling: '',
-        french: ''
+        german: 'Sie verschenkt alle Bücher.',
+        germanWithoutMisspeling: 'sieverschenktallebucher',
+        french: 'Elle fait cadeau de tous les livres.'
       },
       {
         id: 23,
         forLesson: true,
-        german: '',
-        germanWithoutMisspeling: '',
-        french: ''
+        german: 'aushalten, hält aus, hielt aus, hat ausgehalten',
+        germanWithoutMisspeling: 'aushaltenhaltaushieltaushatausgehalten',
+        french: 'supporter (3 formes)'
+      },
+      {
+        id: 24,
+        forLesson: true,
+        german: 'Ich könnte das nicht aushalten !',
+        germanWithoutMisspeling: 'ichkonntedasnichtaushalten',
+        french: 'Je ne pourrais pas supporter cela !'
+      },
+      {
+        id: 25,
+        forLesson: true,
+        german: 'bewusst leben',
+        germanWithoutMisspeling: 'bewusstleben',
+        french: 'vivre consciemment'
+      },
+      {
+        id: 26,
+        forLesson: true,
+        german: 'Er verzichtet auf vieles und lebt bewusst.',
+        germanWithoutMisspeling: 'erverzichtetaufvielesundlebtbewusst',
+        french: 'Il renonce à beaucoup de choses et vit consciemment.'
+      },
+      {
+        id: 27,
+        forLesson: false,
+        content: "Révision 10ème K.5 S.2",
+        color: "grey"
+      },
+      {
+        id: 28,
+        forLesson: true,
+        german: 'die Kartoffel, die Kartoffeln',
+        germanWithoutMisspeling: 'diekartoffeldiekartoffeln',
+        french: 'la pomme de terre, les pommes de terre'
+      },
+      {
+        id: 29,
+        forLesson: true,
+        german: 'der Käse',
+        germanWithoutMisspeling: 'derkase',
+        french: 'le fromage'
+      },
+      {
+        id: 30,
+        forLesson: true,
+        german: 'die Milch',
+        germanWithoutMisspeling: 'diemilch',
+        french: 'le lait'
+      },
+      {
+        id: 31,
+        forLesson: true,
+        german: 'die Butter',
+        germanWithoutMisspeling: 'diebutter',
+        french: 'le beurre'
+      },
+      {
+        id: 32,
+        forLesson: true,
+        german: 'das Wasser',
+        germanWithoutMisspeling: 'daswasser',
+        french: "l'eau"
+      },
+      {
+        id: 33,
+        forLesson: true,
+        german: 'der Saft, die Säfte',
+        germanWithoutMisspeling: 'dersaftdiesafte',
+        french: 'le jus, les jus'
+      },
+      {
+        id: 34,
+        forLesson: true,
+        german: 'die Limonade, die Limonaden',
+        germanWithoutMisspeling: 'dielimonadedielimonaden',
+        french: 'la limonade, les limonades'
+      },
+      {
+        id: 35,
+        forLesson: true,
+        german: 'die Schokolade, die Schokoladen',
+        germanWithoutMisspeling: 'dieschokoladedieschokoladen',
+        french: 'le chocolat, les chocolats'
+      },
+      {
+        id: 36,
+        forLesson: true,
+        german: 'der Reis',
+        germanWithoutMisspeling: 'derreis',
+        french: 'le riz'
+      },
+      {
+        id: 37,
+        forLesson: true,
+        german: 'die Wurst, die Würste',
+        germanWithoutMisspeling: 'diewurstdiewurste',
+        french: 'la saucisse'
+      },
+      {
+        id: 38,
+        forLesson: true,
+        german: 'der Schinken',
+        germanWithoutMisspeling: 'derschinken',
+        french: 'le jambon'
+      },
+      {
+        id: 39,
+        forLesson: true,
+        german: 'die Birne, die Birnen',
+        germanWithoutMisspeling: 'diebirnediebirnen',
+        french: 'la poire'
+      },
+      {
+        id: 40,
+        forLesson: true,
+        german: 'die Trauben',
+        germanWithoutMisspeling: 'dietrauben',
+        french: 'le raisin'
+      },
+      {
+        id: 41,
+        forLesson: true,
+        german: 'die Früchte / das Obst',
+        germanWithoutMisspeling: 'diefruchtedasobst',
+        french: 'les fruits (les 2 variantes)'
+      },
+      {
+        id: 42,
+        forLesson: true,
+        german: 'das Gemüse',
+        germanWithoutMisspeling: 'dasgemuse',
+        french: 'les légumes'
+      },
+      {
+        id: 43,
+        forLesson: true,
+        german: 'das Salz',
+        germanWithoutMisspeling: 'dassalz',
+        french: 'le sel'
+      },
+      {
+        id: 44,
+        forLesson: true,
+        german: 'der Pfeffer',
+        germanWithoutMisspeling: 'derpfeffer',
+        french: 'le poivre'
+      },
+      {
+        id: 45,
+        forLesson: true,
+        german: 'das Mehl',
+        germanWithoutMisspeling: 'dasmehl',
+        french: 'la farine'
+      },
+      {
+        id: 46,
+        forLesson: true,
+        german: 'der Zucker',
+        germanWithoutMisspeling: 'derzucker',
+        french: 'le sucre'
+      },
+      {
+        id: 47,
+        forLesson: true,
+        german: 'das Fett, die Fette',
+        germanWithoutMisspeling: 'dasfettdiefette',
+        french: 'la graisse, les graisses'
+      },
+      {
+        id: 48,
+        forLesson: true,
+        german: 'das Öl, die Öle',
+        germanWithoutMisspeling: 'dasoldieole',
+        french: "l'huile"
+      },
+      {
+        id: 49,
+        forLesson: true,
+        german: 'das Ei, die Eier',
+        germanWithoutMisspeling: 'daseidieeier',
+        french: "l'oeuf, les oeufs"
+      },
+      {
+        id: 50,
+        forLesson: true,
+        german: 'die Süssigkeiten',
+        germanWithoutMisspeling: 'diesussigkeiten',
+        french: 'les sucreries'
+      },
+      {
+        id: 51,
+        forLesson: true,
+        german: 'gesund ≠ ungesund',
+        germanWithoutMisspeling: 'gesundungesund',
+        french: 'sain ≠ malsain'
+      },
+      {
+        id: 52,
+        forLesson: true,
+        german: 'das Stück, die Stücke',
+        germanWithoutMisspeling: 'dasstuckdiestucke',
+        french: 'le morceau, la tranche'
+      },
+      {
+        id: 53,
+        forLesson: true,
+        german: 'zu viel / zu oft',
+        germanWithoutMisspeling: 'zuvielzuoft',
+        french: 'trop / trop souvent'
+      },
+      {
+        id: 54,
+        forLesson: true,
+        german: 'täglich / jeden Tag',
+        germanWithoutMisspeling: 'taglichjedentag',
+        french: 'tous les jours / chaque jour'
+      },
+      {
+        id: 55,
+        forLesson: true,
+        german: 'pro Tag',
+        germanWithoutMisspeling: 'protag',
+        french: 'par jour'
+      },
+      {
+        id: 56,
+        forLesson: false,
+        content: "Bientot Kapitel 6",
+        color: "blue"
       },
     ]);
 
@@ -1209,8 +1439,8 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (90:8) {:else}
-    function create_else_block$1(ctx) {
+    // (92:79) 
+    function create_if_block_2$2(ctx) {
     	let p;
     	let t_value = /*germanWord*/ ctx[17].content + "";
     	let t;
@@ -1219,8 +1449,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "info svelte-17ivda2");
-    			add_location(p, file$7, 90, 10, 2791);
+    			attr_dev(p, "class", "info-revision10eme svelte-1055o42");
+    			add_location(p, file$7, 92, 10, 2996);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1236,9 +1466,45 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$1.name,
-    		type: "else",
-    		source: "(90:8) {:else}",
+    		id: create_if_block_2$2.name,
+    		type: "if",
+    		source: "(92:79) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (90:79) 
+    function create_if_block_1$2(ctx) {
+    	let p;
+    	let t_value = /*germanWord*/ ctx[17].content + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "info-kapitel svelte-1055o42");
+    			add_location(p, file$7, 90, 10, 2855);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*actualWordsPage*/ 2 && t_value !== (t_value = /*germanWord*/ ctx[17].content + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$2.name,
+    		type: "if",
+    		source: "(90:79) ",
     		ctx
     	});
 
@@ -1277,8 +1543,9 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			attr_dev(input, "type", "checkbox");
+    			attr_dev(input, "class", "svelte-1055o42");
     			add_location(input, file$7, 84, 10, 2544);
-    			attr_dev(label, "class", "checkbox-container svelte-17ivda2");
+    			attr_dev(label, "class", "checkbox-container svelte-1055o42");
     			add_location(label, file$7, 83, 8, 2498);
     		},
     		m: function mount(target, anchor) {
@@ -1335,24 +1602,25 @@ var app = (function () {
 
     	function select_block_type(ctx, dirty) {
     		if (/*germanWord*/ ctx[17].forLesson == true) return create_if_block$2;
-    		return create_else_block$1;
+    		if (/*germanWord*/ ctx[17].forLesson == false && /*germanWord*/ ctx[17].color === "blue") return create_if_block_1$2;
+    		if (/*germanWord*/ ctx[17].forLesson == false && /*germanWord*/ ctx[17].color === "grey") return create_if_block_2$2;
     	}
 
     	let current_block_type = select_block_type(ctx);
-    	let if_block = current_block_type(ctx);
+    	let if_block = current_block_type && current_block_type(ctx);
 
     	const block = {
     		key: key_1,
     		first: null,
     		c: function create() {
     			first = empty();
-    			if_block.c();
+    			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			this.first = first;
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, first, anchor);
-    			if_block.m(target, anchor);
+    			if (if_block) if_block.m(target, anchor);
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(new_ctx, dirty) {
@@ -1361,8 +1629,8 @@ var app = (function () {
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
     				if_block.p(ctx, dirty);
     			} else {
-    				if_block.d(1);
-    				if_block = current_block_type(ctx);
+    				if (if_block) if_block.d(1);
+    				if_block = current_block_type && current_block_type(ctx);
 
     				if (if_block) {
     					if_block.c();
@@ -1372,7 +1640,11 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(first);
-    			if_block.d(detaching);
+
+    			if (if_block) {
+    				if_block.d(detaching);
+    			}
+
     			if (detaching) detach_dev(if_block_anchor);
     		}
     	};
@@ -1452,23 +1724,24 @@ var app = (function () {
     			img1 = element("img");
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*actualWordsPage*/ ctx[1].every(func);
+    			attr_dev(input, "class", "svelte-1055o42");
     			add_location(input, file$7, 76, 8, 2186);
-    			attr_dev(label, "class", "select-all svelte-17ivda2");
+    			attr_dev(label, "class", "select-all svelte-1055o42");
     			add_location(label, file$7, 75, 6, 2150);
     			add_location(form, file$7, 74, 4, 2136);
-    			attr_dev(div0, "class", "wordsContainer svelte-17ivda2");
+    			attr_dev(div0, "class", "wordsContainer svelte-1055o42");
     			add_location(div0, file$7, 73, 2, 2102);
     			if (!src_url_equal(img0.src, img0_src_value = "/img/leftArrow.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-17ivda2");
-    			add_location(img0, file$7, 96, 4, 2914);
-    			attr_dev(span, "class", "actual-page svelte-17ivda2");
-    			add_location(span, file$7, 97, 4, 2999);
+    			attr_dev(img0, "class", "svelte-1055o42");
+    			add_location(img0, file$7, 98, 4, 3133);
+    			attr_dev(span, "class", "actual-page svelte-1055o42");
+    			add_location(span, file$7, 99, 4, 3218);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/rightArrow.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-17ivda2");
-    			add_location(img1, file$7, 98, 4, 3059);
-    			attr_dev(div1, "class", "arrows svelte-17ivda2");
-    			add_location(div1, file$7, 95, 2, 2888);
-    			attr_dev(div2, "class", "german-words-list svelte-17ivda2");
+    			attr_dev(img1, "class", "svelte-1055o42");
+    			add_location(img1, file$7, 100, 4, 3278);
+    			attr_dev(div1, "class", "arrows svelte-1055o42");
+    			add_location(div1, file$7, 97, 2, 3107);
+    			attr_dev(div2, "class", "german-words-list svelte-1055o42");
     			add_location(div2, file$7, 72, 0, 2067);
     		},
     		l: function claim(nodes) {
@@ -2080,7 +2353,7 @@ var app = (function () {
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
     			attr_dev(textarea, "class", "svelte-14trc7b");
-    			add_location(textarea, file$5, 152, 4, 4623);
+    			add_location(textarea, file$5, 152, 4, 4789);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2133,7 +2406,7 @@ var app = (function () {
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
     			attr_dev(textarea, "class", "svelte-14trc7b");
-    			add_location(textarea, file$5, 150, 4, 4442);
+    			add_location(textarea, file$5, 150, 4, 4608);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2197,7 +2470,7 @@ var app = (function () {
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 167, 6, 5842);
+    			add_location(div, file$5, 167, 6, 6008);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2283,11 +2556,11 @@ var app = (function () {
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
     			attr_dev(p, "class", "wrong-answer svelte-14trc7b");
-    			add_location(p, file$5, 164, 8, 5735);
+    			add_location(p, file$5, 164, 8, 5901);
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 162, 6, 5506);
+    			add_location(div, file$5, 162, 6, 5672);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2374,11 +2647,11 @@ var app = (function () {
     			div = element("div");
     			create_component(button.$$.fragment);
     			attr_dev(p, "class", "not-enough-characters svelte-14trc7b");
-    			add_location(p, file$5, 159, 6, 5166);
+    			add_location(p, file$5, 159, 6, 5332);
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 160, 6, 5247);
+    			add_location(div, file$5, 160, 6, 5413);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2464,11 +2737,11 @@ var app = (function () {
     			div = element("div");
     			create_component(button.$$.fragment);
     			attr_dev(p, "class", "max-characters svelte-14trc7b");
-    			add_location(p, file$5, 156, 6, 4843);
+    			add_location(p, file$5, 156, 6, 5009);
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 157, 6, 4899);
+    			add_location(div, file$5, 157, 6, 5065);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2703,27 +2976,27 @@ var app = (function () {
     			t7 = space();
     			if_block1.c();
     			attr_dev(div0, "class", "pourcentage-contrast svelte-14trc7b");
-    			add_location(div0, file$5, 137, 6, 3966);
+    			add_location(div0, file$5, 137, 6, 4132);
     			attr_dev(div1, "class", "pourcentage svelte-14trc7b");
     			set_style(div1, "width", /*$tweenedScore*/ ctx[13] + "%");
-    			add_location(div1, file$5, 136, 4, 3900);
+    			add_location(div1, file$5, 136, 4, 4066);
     			attr_dev(div2, "class", "course-pourcentage svelte-14trc7b");
-    			add_location(div2, file$5, 135, 2, 3862);
+    			add_location(div2, file$5, 135, 2, 4028);
     			attr_dev(h2, "class", "svelte-14trc7b");
-    			add_location(h2, file$5, 141, 4, 4064);
+    			add_location(h2, file$5, 141, 4, 4230);
     			attr_dev(p0, "class", "help svelte-14trc7b");
     			attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
-    			add_location(p0, file$5, 143, 6, 4125);
+    			add_location(p0, file$5, 143, 6, 4291);
     			attr_dev(p1, "class", "words svelte-14trc7b");
-    			add_location(p1, file$5, 145, 6, 4275);
+    			add_location(p1, file$5, 145, 6, 4441);
     			attr_dev(div3, "class", "words-container svelte-14trc7b");
-    			add_location(div3, file$5, 142, 4, 4088);
+    			add_location(div3, file$5, 142, 4, 4254);
     			attr_dev(div4, "class", "orinal-words svelte-14trc7b");
-    			add_location(div4, file$5, 140, 2, 4032);
+    			add_location(div4, file$5, 140, 2, 4198);
     			attr_dev(div5, "class", "translate-to-french svelte-14trc7b");
-    			add_location(div5, file$5, 148, 2, 4375);
+    			add_location(div5, file$5, 148, 2, 4541);
     			attr_dev(div6, "class", "course svelte-14trc7b");
-    			add_location(div6, file$5, 134, 0, 3838);
+    			add_location(div6, file$5, 134, 0, 4004);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2929,7 +3202,7 @@ var app = (function () {
     			} else if (lessonEnd == true) {
     				location.reload();
     			}
-    		} else if (translatedCurrentWordWithoutMisspeling == currentWord.german.toLowerCase().split(" ").join("")) {
+    		} else if (translatedCurrentWordWithoutMisspeling == currentWord.germanWithoutMisspeling) {
     			selectedGermanWords.update(selectedWords => {
     				// Remove the word from the array
     				return selectedWords.filter(word => word.id !== currentWord.id);
@@ -3069,7 +3342,7 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty[0] & /*translatedCurrentWord*/ 1) {
-    			$$invalidate(22, translatedCurrentWordWithoutMisspeling = translatedCurrentWord.toLowerCase().split(" ").join(""));
+    			$$invalidate(22, translatedCurrentWordWithoutMisspeling = translatedCurrentWord.toLowerCase().split(" ").join("").split(".").join("").split(",").join("").split("!").join("").split("?").join("").split("ü").join("u").split("ö").join("o").split("ä").join("a").split("≠").join("").split("/").join(""));
     		}
 
     		if ($$self.$$.dirty[0] & /*translatedCurrentWordWithoutMisspeling*/ 4194304) {

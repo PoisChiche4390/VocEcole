@@ -39,7 +39,7 @@
 
   $: currentWord = "";
   $: translatedCurrentWord = "";
-  $: translatedCurrentWordWithoutMisspeling = translatedCurrentWord.toLowerCase().split(" ").join("");
+  $: translatedCurrentWordWithoutMisspeling = translatedCurrentWord.toLowerCase().split(" ").join("").split(".").join("").split(",").join("").split("!").join("").split("?").join("").split("ü").join("u").split("ö").join("o").split("ä").join("a").split("≠").join("").split("/").join("");
   $: if (translatedCurrentWordWithoutMisspeling.length >= 1) {
     notEnoughCharacters = false;
   };
@@ -91,7 +91,7 @@
       } else if (lessonEnd == true) {
         location.reload()
       }
-    } else if (translatedCurrentWordWithoutMisspeling == currentWord.german.toLowerCase().split(" ").join("")) {
+    } else if (translatedCurrentWordWithoutMisspeling == currentWord.germanWithoutMisspeling) {
       selectedGermanWords.update(selectedWords => {
         // Remove the word from the array
         return selectedWords.filter(word => word.id !== currentWord.id);

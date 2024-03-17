@@ -87,8 +87,10 @@
                 on:change={(event) => changeWord(event, germanWord)}/>
           {germanWord.german} = {germanWord.french}
         </label>
-        {:else}
-          <p class="info">{germanWord.content}</p>
+        {:else if germanWord.forLesson == false && germanWord.color === "blue"}
+          <p class="info-kapitel">{germanWord.content}</p>
+        {:else if germanWord.forLesson == false && germanWord.color === "grey"}
+          <p class="info-revision10eme">{germanWord.content}</p>
         {/if}
       {/each}
     </form>
@@ -125,8 +127,16 @@
   label {
     cursor: pointer;
   }
-  .info {
+  input {
+    cursor: pointer;
+  }
+  .info-kapitel {
     background: #a9d9ea;
+    padding: 4px 0;
+    font-weight: bold;
+  }
+  .info-revision10eme {
+    background: #c4c4c4;
     padding: 4px 0;
     font-weight: bold;
   }
