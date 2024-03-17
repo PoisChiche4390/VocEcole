@@ -83,6 +83,8 @@
 	};
 </script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <main style="background: {background};">
 	<div class="sub-main">
 		{#if course == false && darkLightModeMenu == false && menu == false}
