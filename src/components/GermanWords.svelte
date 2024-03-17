@@ -8,7 +8,7 @@
   let width = screen.width;
   let height = screen.height;
   $: if (width < 1200 && height < 2550) {
-    pageSize = 5
+    pageSize = 6
   } else {
     pageSize = 10
   }
@@ -159,6 +159,9 @@
     }
     img {
       height: 25px;
+    }
+    .checkbox-container {
+      margin: 3vh 0;
     }
   }
 </style>

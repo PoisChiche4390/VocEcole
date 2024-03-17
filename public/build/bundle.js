@@ -1059,14 +1059,14 @@ var app = (function () {
         forLesson: true,
         german: 'die Fussgängerzone, die Fussgängerzonen',
         germanWithoutMisspeling: 'diefussgängerzone,diefussgängerzonen',
-        french: 'la zone piétonne'
+        french: 'la zone piétonne, les zones piétonnes'
       },
       {
         id: 5,
         forLesson: true,
         german: 'der Laden, die Laden',
         germanWithoutMisspeling: 'derladen,dieladen',
-        french: 'le magasin'
+        french: 'le magasin, les magasins'
       },
       {
         id: 6,
@@ -1219,7 +1219,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "info svelte-onph9d");
+    			attr_dev(p, "class", "info svelte-z4el46");
     			add_location(p, file$7, 90, 10, 2791);
     		},
     		m: function mount(target, anchor) {
@@ -1278,7 +1278,7 @@ var app = (function () {
     			t4 = space();
     			attr_dev(input, "type", "checkbox");
     			add_location(input, file$7, 84, 10, 2544);
-    			attr_dev(label, "class", "checkbox-container svelte-onph9d");
+    			attr_dev(label, "class", "checkbox-container svelte-z4el46");
     			add_location(label, file$7, 83, 8, 2498);
     		},
     		m: function mount(target, anchor) {
@@ -1453,22 +1453,22 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*actualWordsPage*/ ctx[1].every(func);
     			add_location(input, file$7, 76, 8, 2186);
-    			attr_dev(label, "class", "select-all svelte-onph9d");
+    			attr_dev(label, "class", "select-all svelte-z4el46");
     			add_location(label, file$7, 75, 6, 2150);
     			add_location(form, file$7, 74, 4, 2136);
-    			attr_dev(div0, "class", "wordsContainer svelte-onph9d");
+    			attr_dev(div0, "class", "wordsContainer svelte-z4el46");
     			add_location(div0, file$7, 73, 2, 2102);
     			if (!src_url_equal(img0.src, img0_src_value = "/img/leftArrow.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-onph9d");
+    			attr_dev(img0, "class", "svelte-z4el46");
     			add_location(img0, file$7, 96, 4, 2914);
-    			attr_dev(span, "class", "actual-page svelte-onph9d");
+    			attr_dev(span, "class", "actual-page svelte-z4el46");
     			add_location(span, file$7, 97, 4, 2999);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/rightArrow.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-onph9d");
+    			attr_dev(img1, "class", "svelte-z4el46");
     			add_location(img1, file$7, 98, 4, 3059);
-    			attr_dev(div1, "class", "arrows svelte-onph9d");
+    			attr_dev(div1, "class", "arrows svelte-z4el46");
     			add_location(div1, file$7, 95, 2, 2888);
-    			attr_dev(div2, "class", "german-words-list svelte-onph9d");
+    			attr_dev(div2, "class", "german-words-list svelte-z4el46");
     			add_location(div2, file$7, 72, 0, 2067);
     		},
     		l: function claim(nodes) {
@@ -1685,7 +1685,7 @@ var app = (function () {
     	};
 
     	if (width < 1200 && height < 2550) {
-    		$$invalidate(6, pageSize = 5);
+    		$$invalidate(6, pageSize = 6);
     	} else {
     		$$invalidate(6, pageSize = 10);
     	}
@@ -2050,7 +2050,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$5 = "src\\components\\GermanCourse.svelte";
 
-    // (132:6) {#if wordHelp == true}
+    // (140:6) {#if wordHelp == true}
     function create_if_block_4$1(ctx) {
     	let p;
     	let t_value = /*currentWord*/ ctx[10].german + "";
@@ -2064,7 +2064,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "help svelte-1jnti6x");
-    			add_location(p, file$5, 132, 8, 3655);
+    			add_location(p, file$5, 140, 8, 3953);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2105,14 +2105,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(132:6) {#if wordHelp == true}",
+    		source: "(140:6) {#if wordHelp == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (141:4) {:else}
+    // (149:4) {:else}
     function create_else_block_1(ctx) {
     	let textarea;
     	let mounted;
@@ -2126,7 +2126,7 @@ var app = (function () {
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
     			attr_dev(textarea, "class", "svelte-1jnti6x");
-    			add_location(textarea, file$5, 141, 4, 4088);
+    			add_location(textarea, file$5, 149, 4, 4386);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2157,14 +2157,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(141:4) {:else}",
+    		source: "(149:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:4) {#if readOnly == true}
+    // (147:4) {#if readOnly == true}
     function create_if_block_3$1(ctx) {
     	let textarea;
     	let mounted;
@@ -2179,7 +2179,7 @@ var app = (function () {
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
     			attr_dev(textarea, "class", "svelte-1jnti6x");
-    			add_location(textarea, file$5, 139, 4, 3907);
+    			add_location(textarea, file$5, 147, 4, 4205);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2210,14 +2210,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(139:4) {#if readOnly == true}",
+    		source: "(147:4) {#if readOnly == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:4) {:else}
+    // (164:4) {:else}
     function create_else_block(ctx) {
     	let div;
     	let button;
@@ -2242,7 +2242,7 @@ var app = (function () {
     			attr_dev(div, "class", "colored-bottom svelte-1jnti6x");
     			set_style(div, "background", /*background*/ ctx[7]);
     			set_style(div, "margin-top", /*margin3*/ ctx[6] + "px");
-    			add_location(div, file$5, 156, 6, 5214);
+    			add_location(div, file$5, 164, 6, 5512);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2287,14 +2287,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(156:4) {:else}",
+    		source: "(164:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:34) 
+    // (159:34) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let button;
@@ -2326,11 +2326,11 @@ var app = (function () {
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
     			attr_dev(p, "class", "wrong-answer svelte-1jnti6x");
-    			add_location(p, file$5, 153, 6, 5109);
+    			add_location(p, file$5, 161, 6, 5407);
     			attr_dev(div, "class", "colored-bottom svelte-1jnti6x");
     			set_style(div, "background", /*background*/ ctx[7]);
     			set_style(div, "margin-top", /*margin3*/ ctx[6] + "px");
-    			add_location(div, file$5, 151, 4, 4914);
+    			add_location(div, file$5, 159, 4, 5212);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2380,14 +2380,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(151:34) ",
+    		source: "(159:34) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:42) 
+    // (156:42) 
     function create_if_block_1$1(ctx) {
     	let p;
     	let t1;
@@ -2415,11 +2415,11 @@ var app = (function () {
     			div = element("div");
     			create_component(button.$$.fragment);
     			attr_dev(p, "class", "not-enough-characters svelte-1jnti6x");
-    			add_location(p, file$5, 148, 6, 4601);
+    			add_location(p, file$5, 156, 6, 4899);
     			attr_dev(div, "class", "colored-bottom svelte-1jnti6x");
     			set_style(div, "background", /*background*/ ctx[7]);
     			set_style(div, "margin-top", /*margin1*/ ctx[4] - 25 + "px");
-    			add_location(div, file$5, 149, 6, 4682);
+    			add_location(div, file$5, 157, 6, 4980);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2468,14 +2468,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(148:42) ",
+    		source: "(156:42) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:4) {#if translatedCurrentWord.length > 174}
+    // (153:4) {#if translatedCurrentWord.length > 174}
     function create_if_block$1(ctx) {
     	let p;
     	let t1;
@@ -2503,11 +2503,11 @@ var app = (function () {
     			div = element("div");
     			create_component(button.$$.fragment);
     			attr_dev(p, "class", "max-characters svelte-1jnti6x");
-    			add_location(p, file$5, 145, 6, 4308);
+    			add_location(p, file$5, 153, 6, 4606);
     			attr_dev(div, "class", "colored-bottom svelte-1jnti6x");
     			set_style(div, "background", /*background*/ ctx[7]);
     			set_style(div, "margin-top", /*margin2*/ ctx[5] + "px");
-    			add_location(div, file$5, 146, 6, 4364);
+    			add_location(div, file$5, 154, 6, 4662);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2556,14 +2556,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(145:4) {#if translatedCurrentWord.length > 174}",
+    		source: "(153:4) {#if translatedCurrentWord.length > 174}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (157:92) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (165:92) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -2583,14 +2583,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(157:92) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(165:92) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (153:6) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (161:6) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -2610,14 +2610,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(153:6) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(161:6) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:97) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (158:97) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -2637,14 +2637,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(150:97) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(158:97) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (147:92) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
+    // (155:92) <Button color={color} margin="{margin1}px 0" on:click={() => submitWord()}>
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -2664,7 +2664,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(147:92) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
+    		source: "(155:92) <Button color={color} margin=\\\"{margin1}px 0\\\" on:click={() => submitWord()}>",
     		ctx
     	});
 
@@ -2737,24 +2737,24 @@ var app = (function () {
     			t6 = space();
     			if_block2.c();
     			attr_dev(div0, "class", "pourcentage-contrast svelte-1jnti6x");
-    			add_location(div0, file$5, 125, 6, 3464);
+    			add_location(div0, file$5, 133, 6, 3762);
     			attr_dev(div1, "class", "pourcentage svelte-1jnti6x");
     			set_style(div1, "width", /*$tweenedScore*/ ctx[11] + "%");
-    			add_location(div1, file$5, 124, 4, 3398);
+    			add_location(div1, file$5, 132, 4, 3696);
     			attr_dev(div2, "class", "course-pourcentage svelte-1jnti6x");
-    			add_location(div2, file$5, 123, 2, 3360);
+    			add_location(div2, file$5, 131, 2, 3658);
     			attr_dev(h2, "class", "svelte-1jnti6x");
-    			add_location(h2, file$5, 129, 4, 3562);
+    			add_location(h2, file$5, 137, 4, 3860);
     			attr_dev(p, "class", "words svelte-1jnti6x");
-    			add_location(p, file$5, 134, 6, 3740);
+    			add_location(p, file$5, 142, 6, 4038);
     			attr_dev(div3, "class", "words-container svelte-1jnti6x");
-    			add_location(div3, file$5, 130, 4, 3586);
+    			add_location(div3, file$5, 138, 4, 3884);
     			attr_dev(div4, "class", "orinal-words svelte-1jnti6x");
-    			add_location(div4, file$5, 128, 2, 3530);
+    			add_location(div4, file$5, 136, 2, 3828);
     			attr_dev(div5, "class", "translate-to-french svelte-1jnti6x");
-    			add_location(div5, file$5, 137, 2, 3840);
+    			add_location(div5, file$5, 145, 2, 4138);
     			attr_dev(div6, "class", "course svelte-1jnti6x");
-    			add_location(div6, file$5, 122, 0, 3336);
+    			add_location(div6, file$5, 130, 0, 3634);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2891,10 +2891,10 @@ var app = (function () {
 
     function instance$5($$self, $$props, $$invalidate) {
     	let notEnoughCharacters;
+    	let wordHelp;
     	let currentWord;
     	let translatedCurrentWord;
     	let translatedCurrentWordWithoutMisspeling;
-    	let wordHelp;
     	let $selectedGermanWords;
     	let $tweenedScore;
     	validate_store(selectedGermanWords, 'selectedGermanWords');
@@ -2908,13 +2908,13 @@ var app = (function () {
     	let lessonEnd = false;
     	let readOnly = false;
     	let wrongAnswer = false;
+    	let continueBtn = false;
     	const totalWords = $selectedGermanWords.length;
     	let margin1 = 80;
     	let margin2 = 75;
     	let margin3 = 100;
     	let width = screen.width;
     	let height = screen.height;
-    	let continueBtn = false;
     	let background = "#f8f8f8";
     	const tweenedScore = tweened(0);
     	validate_store(tweenedScore, 'tweenedScore');
@@ -2950,14 +2950,27 @@ var app = (function () {
     		if (translatedCurrentWordWithoutMisspeling.length < 1) {
     			$$invalidate(9, notEnoughCharacters = true);
     		} else if (continueBtn == true) {
-    			continueBtn = false;
-    			$$invalidate(1, color = 'duolingo-button-green');
-    			$$invalidate(9, notEnoughCharacters = false);
-    			$$invalidate(7, background = "#f8f8f8");
-    			$$invalidate(0, translatedCurrentWord = "");
-    			$$invalidate(2, readOnly = false);
-    			$$invalidate(3, wrongAnswer = false);
-    			updateCurrentWord();
+    			if (lessonEnd == false) {
+    				continueBtn = false;
+    				$$invalidate(1, color = 'duolingo-button-green');
+    				$$invalidate(9, notEnoughCharacters = false);
+    				$$invalidate(7, background = "#f8f8f8");
+    				$$invalidate(0, translatedCurrentWord = "");
+    				$$invalidate(2, readOnly = false);
+    				$$invalidate(3, wrongAnswer = false);
+    				updateCurrentWord();
+    			} else if (lessonEnd == true) {
+    				$$invalidate(17, score = 0);
+    				$$invalidate(18, scorePercentage = 0);
+    				$$invalidate(1, color = 'duolingo-button-green');
+    				$$invalidate(19, lessonEnd = false);
+    				$$invalidate(2, readOnly = false);
+    				$$invalidate(3, wrongAnswer = false);
+    				$$invalidate(9, notEnoughCharacters = false);
+    				continueBtn = false;
+    				$$invalidate(8, wordHelp = false);
+    				dispatch('returnToLobby');
+    			}
     		} else if (translatedCurrentWordWithoutMisspeling == currentWord.german.toLowerCase().split(" ").join("")) {
     			selectedGermanWords.update(selectedWords => {
     				// Remove the word from the array
@@ -2973,10 +2986,7 @@ var app = (function () {
 
     			if ($selectedGermanWords.length == 0) {
     				$$invalidate(19, lessonEnd = true);
-    				console.log("letsgo");
     			}
-    		} else if (lessonEnd == true) {
-    			dispatch('returnToLobby');
     		} else {
     			$$invalidate(7, background = "#ffb2b2");
     			$$invalidate(9, notEnoughCharacters = false);
@@ -3039,13 +3049,13 @@ var app = (function () {
     		lessonEnd,
     		readOnly,
     		wrongAnswer,
+    		continueBtn,
     		totalWords,
     		margin1,
     		margin2,
     		margin3,
     		width,
     		height,
-    		continueBtn,
     		background,
     		tweenedScore,
     		pressEnterInTextarea,
@@ -3069,12 +3079,12 @@ var app = (function () {
     		if ('lessonEnd' in $$props) $$invalidate(19, lessonEnd = $$props.lessonEnd);
     		if ('readOnly' in $$props) $$invalidate(2, readOnly = $$props.readOnly);
     		if ('wrongAnswer' in $$props) $$invalidate(3, wrongAnswer = $$props.wrongAnswer);
+    		if ('continueBtn' in $$props) continueBtn = $$props.continueBtn;
     		if ('margin1' in $$props) $$invalidate(4, margin1 = $$props.margin1);
     		if ('margin2' in $$props) $$invalidate(5, margin2 = $$props.margin2);
     		if ('margin3' in $$props) $$invalidate(6, margin3 = $$props.margin3);
     		if ('width' in $$props) $$invalidate(35, width = $$props.width);
     		if ('height' in $$props) $$invalidate(36, height = $$props.height);
-    		if ('continueBtn' in $$props) continueBtn = $$props.continueBtn;
     		if ('background' in $$props) $$invalidate(7, background = $$props.background);
     		if ('wordHelp' in $$props) $$invalidate(8, wordHelp = $$props.wordHelp);
     		if ('notEnoughCharacters' in $$props) $$invalidate(9, notEnoughCharacters = $$props.notEnoughCharacters);
@@ -3112,6 +3122,7 @@ var app = (function () {
     	};
 
     	$$invalidate(9, notEnoughCharacters = false);
+    	$$invalidate(8, wordHelp = false);
 
     	if (width < 1200 && height < 2550) {
     		$$invalidate(4, margin1 = 50);
@@ -3123,7 +3134,6 @@ var app = (function () {
 
     	$$invalidate(10, currentWord = "");
     	$$invalidate(0, translatedCurrentWord = "");
-    	$$invalidate(8, wordHelp = false);
 
     	return [
     		translatedCurrentWord,

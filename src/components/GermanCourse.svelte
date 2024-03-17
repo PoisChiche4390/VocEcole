@@ -15,8 +15,10 @@
   let lessonEnd = false;
   let readOnly = false;
   let wrongAnswer = false;
+  let continueBtn = false;
   const totalWords = $selectedGermanWords.length;
   $: notEnoughCharacters = false;
+  $: wordHelp = false;
 
   let margin1 = 80;
   let margin2 = 75;
@@ -37,10 +39,6 @@
   $: if (translatedCurrentWordWithoutMisspeling.length >= 1) {
     notEnoughCharacters = false;
   };
-
-  let continueBtn = false;
-
-  $: wordHelp = false;
 
   let background = "#f8f8f8";
 
@@ -77,14 +75,27 @@
     if (translatedCurrentWordWithoutMisspeling.length < 1) {
       notEnoughCharacters = true;
     } else if (continueBtn == true) {
-      continueBtn = false;
-      color = 'duolingo-button-green'
-      notEnoughCharacters = false;
-      background = "#f8f8f8";
-      translatedCurrentWord = "";
-      readOnly = false;
-      wrongAnswer = false;
-      updateCurrentWord()
+      if (lessonEnd == false) {
+        continueBtn = false;
+        color = 'duolingo-button-green'
+        notEnoughCharacters = false;
+        background = "#f8f8f8";
+        translatedCurrentWord = "";
+        readOnly = false;
+        wrongAnswer = false;
+        updateCurrentWord()
+      } else if (lessonEnd == true) {
+        score = 0;
+        scorePercentage = 0;
+        color = 'duolingo-button-green'
+        lessonEnd = false;
+        readOnly = false;
+        wrongAnswer = false;
+        notEnoughCharacters = false;
+        continueBtn = false;
+        wordHelp = false;
+        dispatch('returnToLobby')
+      }
     } else if (translatedCurrentWordWithoutMisspeling == currentWord.german.toLowerCase().split(" ").join("")) {
       selectedGermanWords.update(selectedWords => {
         // Remove the word from the array
@@ -98,10 +109,7 @@
       readOnly = true;
       if ($selectedGermanWords.length == 0) {
         lessonEnd = true
-        console.log("letsgo")
       }
-    } else if (lessonEnd == true) {
-      dispatch('returnToLobby')
     } else {
       background = "#ffb2b2";
       notEnoughCharacters = false;

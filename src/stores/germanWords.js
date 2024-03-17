@@ -25,14 +25,14 @@ const germanWords = writable([
     forLesson: true,
     german: 'die Fussgängerzone, die Fussgängerzonen',
     germanWithoutMisspeling: 'diefussgängerzone,diefussgängerzonen',
-    french: 'la zone piétonne'
+    french: 'la zone piétonne, les zones piétonnes'
   },
   {
     id: 5,
     forLesson: true,
     german: 'der Laden, die Laden',
     germanWithoutMisspeling: 'derladen,dieladen',
-    french: 'le magasin'
+    french: 'le magasin, les magasins'
   },
   {
     id: 6,
