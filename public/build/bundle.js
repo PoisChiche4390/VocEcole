@@ -1065,7 +1065,7 @@ var app = (function () {
       {
         id: 5,
         forLesson: true,
-        german: 'der Laden, die Laden',
+        german: 'der Laden, die Läden',
         germanWithoutMisspeling: 'derladendieladen',
         french: 'le magasin, les magasins'
       },
@@ -1439,7 +1439,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (92:79) 
+    // (94:79) 
     function create_if_block_2$2(ctx) {
     	let p;
     	let t_value = /*germanWord*/ ctx[17].content + "";
@@ -1450,7 +1450,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "info-revision10eme svelte-1055o42");
-    			add_location(p, file$7, 92, 10, 2996);
+    			add_location(p, file$7, 94, 10, 3052);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1468,14 +1468,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(92:79) ",
+    		source: "(94:79) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:79) 
+    // (92:79) 
     function create_if_block_1$2(ctx) {
     	let p;
     	let t_value = /*germanWord*/ ctx[17].content + "";
@@ -1486,7 +1486,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "info-kapitel svelte-1055o42");
-    			add_location(p, file$7, 90, 10, 2855);
+    			add_location(p, file$7, 92, 10, 2911);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1504,14 +1504,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(90:79) ",
+    		source: "(92:79) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:8) {#if germanWord.forLesson == true}
+    // (85:8) {#if germanWord.forLesson == true}
     function create_if_block$2(ctx) {
     	let label;
     	let input;
@@ -1544,9 +1544,9 @@ var app = (function () {
     			t4 = space();
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "class", "svelte-1055o42");
-    			add_location(input, file$7, 84, 10, 2544);
+    			add_location(input, file$7, 86, 10, 2600);
     			attr_dev(label, "class", "checkbox-container svelte-1055o42");
-    			add_location(label, file$7, 83, 8, 2498);
+    			add_location(label, file$7, 85, 8, 2554);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -1588,14 +1588,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(83:8) {#if germanWord.forLesson == true}",
+    		source: "(85:8) {#if germanWord.forLesson == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:6) {#each actualWordsPage as germanWord (germanWord.id)}
+    // (84:6) {#each actualWordsPage as germanWord (germanWord.id)}
     function create_each_block(key_1, ctx) {
     	let first;
     	let if_block_anchor;
@@ -1653,7 +1653,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(82:6) {#each actualWordsPage as germanWord (germanWord.id)}",
+    		source: "(84:6) {#each actualWordsPage as germanWord (germanWord.id)}",
     		ctx
     	});
 
@@ -1725,24 +1725,24 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*actualWordsPage*/ ctx[1].every(func);
     			attr_dev(input, "class", "svelte-1055o42");
-    			add_location(input, file$7, 76, 8, 2186);
+    			add_location(input, file$7, 78, 8, 2242);
     			attr_dev(label, "class", "select-all svelte-1055o42");
-    			add_location(label, file$7, 75, 6, 2150);
-    			add_location(form, file$7, 74, 4, 2136);
+    			add_location(label, file$7, 77, 6, 2206);
+    			add_location(form, file$7, 76, 4, 2192);
     			attr_dev(div0, "class", "wordsContainer svelte-1055o42");
-    			add_location(div0, file$7, 73, 2, 2102);
+    			add_location(div0, file$7, 75, 2, 2158);
     			if (!src_url_equal(img0.src, img0_src_value = "/img/leftArrow.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "class", "svelte-1055o42");
-    			add_location(img0, file$7, 98, 4, 3133);
+    			add_location(img0, file$7, 100, 4, 3189);
     			attr_dev(span, "class", "actual-page svelte-1055o42");
-    			add_location(span, file$7, 99, 4, 3218);
+    			add_location(span, file$7, 101, 4, 3274);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/rightArrow.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "svelte-1055o42");
-    			add_location(img1, file$7, 100, 4, 3278);
+    			add_location(img1, file$7, 102, 4, 3334);
     			attr_dev(div1, "class", "arrows svelte-1055o42");
-    			add_location(div1, file$7, 97, 2, 3107);
+    			add_location(div1, file$7, 99, 2, 3163);
     			attr_dev(div2, "class", "german-words-list svelte-1055o42");
-    			add_location(div2, file$7, 72, 0, 2067);
+    			add_location(div2, file$7, 74, 0, 2123);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1881,8 +1881,10 @@ var app = (function () {
     		const isChecked = e.target.checked;
 
     		actualWordsPage.forEach(germanWord => {
-    			germanWord.checked = isChecked;
-    			changeWord({ target: { checked: isChecked } }, germanWord);
+    			if (germanWord.forLesson == true) {
+    				germanWord.checked = isChecked;
+    				changeWord({ target: { checked: isChecked } }, germanWord);
+    			}
     		});
 
     		rightArrowClick();

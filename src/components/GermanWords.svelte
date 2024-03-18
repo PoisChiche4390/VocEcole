@@ -52,8 +52,10 @@
   const toggleCheckAll = async (e) => {
     const isChecked = e.target.checked;
     actualWordsPage.forEach(germanWord => {
-      germanWord.checked = isChecked;
-      changeWord({ target: { checked: isChecked } }, germanWord);
+      if (germanWord.forLesson == true) {
+        germanWord.checked = isChecked;
+        changeWord({ target: { checked: isChecked } }, germanWord);
+      }
     });
     rightArrowClick()
     await delay(0.000000000000000000000000000000000000000000000000000000001);

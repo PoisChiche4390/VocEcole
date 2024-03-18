@@ -31,7 +31,7 @@ const germanWords = writable([
   {
     id: 5,
     forLesson: true,
-    german: 'der Laden, die Laden',
+    german: 'der Laden, die Läden',
     germanWithoutMisspeling: 'derladendieladen',
     french: 'le magasin, les magasins'
   },
