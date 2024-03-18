@@ -162,6 +162,9 @@
   }
   @media screen and (max-width: 1200px) and (max-height: 2550px) {
     .german-words-list {
+    margin-top: 15px;
+    }
+    .german-words-list {
       font-size: 0.8rem;
       transform: translateY(-5%);
     }

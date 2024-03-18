@@ -26,12 +26,12 @@
   let width = screen.width;
   let height = screen.height;
   $: if (width < 1200 && height < 2550) {
-    margin1 = 65
-    margin2 = 25
-    margin3 = 50
-    marginBottom = 0;
+    margin1 = 65;
+    margin2 = 25;
+    margin3 = 50;
+    marginBottom = 15;
   } else {
-    margin1 = 80
+    margin1 = 80;
     margin2 = 75;
     margin3 = 100;
     marginBottom = 80;

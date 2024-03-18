@@ -1449,7 +1449,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "info-revision10eme svelte-1055o42");
+    			attr_dev(p, "class", "info-revision10eme svelte-mkyirk");
     			add_location(p, file$7, 94, 10, 3052);
     		},
     		m: function mount(target, anchor) {
@@ -1485,7 +1485,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "info-kapitel svelte-1055o42");
+    			attr_dev(p, "class", "info-kapitel svelte-mkyirk");
     			add_location(p, file$7, 92, 10, 2911);
     		},
     		m: function mount(target, anchor) {
@@ -1543,9 +1543,9 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			attr_dev(input, "type", "checkbox");
-    			attr_dev(input, "class", "svelte-1055o42");
+    			attr_dev(input, "class", "svelte-mkyirk");
     			add_location(input, file$7, 86, 10, 2600);
-    			attr_dev(label, "class", "checkbox-container svelte-1055o42");
+    			attr_dev(label, "class", "checkbox-container svelte-mkyirk");
     			add_location(label, file$7, 85, 8, 2554);
     		},
     		m: function mount(target, anchor) {
@@ -1724,24 +1724,24 @@ var app = (function () {
     			img1 = element("img");
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*actualWordsPage*/ ctx[1].every(func);
-    			attr_dev(input, "class", "svelte-1055o42");
+    			attr_dev(input, "class", "svelte-mkyirk");
     			add_location(input, file$7, 78, 8, 2242);
-    			attr_dev(label, "class", "select-all svelte-1055o42");
+    			attr_dev(label, "class", "select-all svelte-mkyirk");
     			add_location(label, file$7, 77, 6, 2206);
     			add_location(form, file$7, 76, 4, 2192);
-    			attr_dev(div0, "class", "wordsContainer svelte-1055o42");
+    			attr_dev(div0, "class", "wordsContainer svelte-mkyirk");
     			add_location(div0, file$7, 75, 2, 2158);
     			if (!src_url_equal(img0.src, img0_src_value = "/img/leftArrow.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-1055o42");
+    			attr_dev(img0, "class", "svelte-mkyirk");
     			add_location(img0, file$7, 100, 4, 3189);
-    			attr_dev(span, "class", "actual-page svelte-1055o42");
+    			attr_dev(span, "class", "actual-page svelte-mkyirk");
     			add_location(span, file$7, 101, 4, 3274);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/rightArrow.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-1055o42");
+    			attr_dev(img1, "class", "svelte-mkyirk");
     			add_location(img1, file$7, 102, 4, 3334);
-    			attr_dev(div1, "class", "arrows svelte-1055o42");
+    			attr_dev(div1, "class", "arrows svelte-mkyirk");
     			add_location(div1, file$7, 99, 2, 3163);
-    			attr_dev(div2, "class", "german-words-list svelte-1055o42");
+    			attr_dev(div2, "class", "german-words-list svelte-mkyirk");
     			add_location(div2, file$7, 74, 0, 2123);
     		},
     		l: function claim(nodes) {
@@ -2355,7 +2355,7 @@ var app = (function () {
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
     			attr_dev(textarea, "class", "svelte-14trc7b");
-    			add_location(textarea, file$5, 152, 4, 4789);
+    			add_location(textarea, file$5, 152, 4, 4794);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2408,7 +2408,7 @@ var app = (function () {
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "maxlength", "175");
     			attr_dev(textarea, "class", "svelte-14trc7b");
-    			add_location(textarea, file$5, 150, 4, 4608);
+    			add_location(textarea, file$5, 150, 4, 4613);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -2472,7 +2472,7 @@ var app = (function () {
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 167, 6, 6008);
+    			add_location(div, file$5, 167, 6, 6013);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2558,11 +2558,11 @@ var app = (function () {
     			t1 = text("La bonne réponse était: ");
     			t2 = text(t2_value);
     			attr_dev(p, "class", "wrong-answer svelte-14trc7b");
-    			add_location(p, file$5, 164, 8, 5901);
+    			add_location(p, file$5, 164, 8, 5906);
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin3*/ ctx[8] + "px");
-    			add_location(div, file$5, 162, 6, 5672);
+    			add_location(div, file$5, 162, 6, 5677);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2649,11 +2649,11 @@ var app = (function () {
     			div = element("div");
     			create_component(button.$$.fragment);
     			attr_dev(p, "class", "not-enough-characters svelte-14trc7b");
-    			add_location(p, file$5, 159, 6, 5332);
+    			add_location(p, file$5, 159, 6, 5337);
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 160, 6, 5413);
+    			add_location(div, file$5, 160, 6, 5418);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2739,11 +2739,11 @@ var app = (function () {
     			div = element("div");
     			create_component(button.$$.fragment);
     			attr_dev(p, "class", "max-characters svelte-14trc7b");
-    			add_location(p, file$5, 156, 6, 5009);
+    			add_location(p, file$5, 156, 6, 5014);
     			attr_dev(div, "class", "colored-bottom svelte-14trc7b");
     			set_style(div, "background", /*background*/ ctx[10]);
     			set_style(div, "margin-top", /*margin2*/ ctx[7] + "px");
-    			add_location(div, file$5, 157, 6, 5065);
+    			add_location(div, file$5, 157, 6, 5070);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2978,27 +2978,27 @@ var app = (function () {
     			t7 = space();
     			if_block1.c();
     			attr_dev(div0, "class", "pourcentage-contrast svelte-14trc7b");
-    			add_location(div0, file$5, 137, 6, 4132);
+    			add_location(div0, file$5, 137, 6, 4137);
     			attr_dev(div1, "class", "pourcentage svelte-14trc7b");
     			set_style(div1, "width", /*$tweenedScore*/ ctx[13] + "%");
-    			add_location(div1, file$5, 136, 4, 4066);
+    			add_location(div1, file$5, 136, 4, 4071);
     			attr_dev(div2, "class", "course-pourcentage svelte-14trc7b");
-    			add_location(div2, file$5, 135, 2, 4028);
+    			add_location(div2, file$5, 135, 2, 4033);
     			attr_dev(h2, "class", "svelte-14trc7b");
-    			add_location(h2, file$5, 141, 4, 4230);
+    			add_location(h2, file$5, 141, 4, 4235);
     			attr_dev(p0, "class", "help svelte-14trc7b");
     			attr_dev(p0, "style", /*styleForHelp*/ ctx[4]);
-    			add_location(p0, file$5, 143, 6, 4291);
+    			add_location(p0, file$5, 143, 6, 4296);
     			attr_dev(p1, "class", "words svelte-14trc7b");
-    			add_location(p1, file$5, 145, 6, 4441);
+    			add_location(p1, file$5, 145, 6, 4446);
     			attr_dev(div3, "class", "words-container svelte-14trc7b");
-    			add_location(div3, file$5, 142, 4, 4254);
+    			add_location(div3, file$5, 142, 4, 4259);
     			attr_dev(div4, "class", "orinal-words svelte-14trc7b");
-    			add_location(div4, file$5, 140, 2, 4198);
+    			add_location(div4, file$5, 140, 2, 4203);
     			attr_dev(div5, "class", "translate-to-french svelte-14trc7b");
-    			add_location(div5, file$5, 148, 2, 4541);
+    			add_location(div5, file$5, 148, 2, 4546);
     			attr_dev(div6, "class", "course svelte-14trc7b");
-    			add_location(div6, file$5, 134, 0, 4004);
+    			add_location(div6, file$5, 134, 0, 4009);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3373,7 +3373,7 @@ var app = (function () {
     		$$invalidate(6, margin1 = 65);
     		$$invalidate(7, margin2 = 25);
     		$$invalidate(8, margin3 = 50);
-    		$$invalidate(9, marginBottom = 0);
+    		$$invalidate(9, marginBottom = 15);
     	} else {
     		$$invalidate(6, margin1 = 80);
     		$$invalidate(7, margin2 = 75);
